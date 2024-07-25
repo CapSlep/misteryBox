@@ -514,9 +514,17 @@ function faqsInit() {
 }
 
 setTimeout(() => {
-  if (localStorage.getItem("__is_checkout") != null) {
-    openCheckout();
+  const firstVisitKey = 'firstVisitDone';
 
+  // Check if the first visit flag exists
+  if (!localStorage.getItem(firstVisitKey)) {
+    // Clear local storage if it's the first visit
+    localStorage.clear();
+
+    // Set the first visit flag to indicate the user has visited the site
+    localStorage.setItem(firstVisitKey, 'true');
+  }
+  if (localStorage.getItem("__is_checkout") != null) {
     checkoutInit();
   } else {
     openMain();
