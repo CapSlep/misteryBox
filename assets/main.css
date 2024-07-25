@@ -1,5 +1,5 @@
 :root {
-	--main-color: #000;
+	--main-color: #000000;
 	--button-text-color: #ffffff;
 }
 
@@ -1184,7 +1184,28 @@ body {
 }
 
 .hero__gallery-item {
+	position: relative;
 	max-width: 25rem;
+}
+
+.hero__gallery-item::after {
+	content: "1.95€"; /* The text inside the circle */
+	position: absolute;
+	bottom: 10px; /* Adjust the position as needed */
+	right: 10px; /* Adjust the position as needed */
+	background-color: #131214; /* Background color of the circle */
+	color: #ffffff; /* Text color */
+	width: 40px; /* Width of the circle */
+	height: 40px; /* Height of the circle */
+	border-radius: 50%; /* Make it a circle */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 12px; /* Adjust text size as needed */
+	font-weight: bold; /* Optional, for text emphasis */
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Optional, for added depth */
+	z-index: 10; /* Ensure the circle is above other content */
+	pointer-events: none; /* Prevent the circle from interfering with any clicks */
 }
 
 .hero__gallery-item > img {
@@ -1252,6 +1273,26 @@ body {
 .swiper-slide {
 	background-size: cover;
 	background-position: center;
+}
+
+.swiper-slide::after {
+	content: "1.95€"; /* The text inside the circle */
+	position: absolute;
+	bottom: 10px; /* Adjust the position as needed */
+	right: 10px; /* Adjust the position as needed */
+	background-color: #131214; /* Background color of the circle */
+	color: #ffffff; /* Text color */
+	width: 40px; /* Width of the circle */
+	height: 40px; /* Height of the circle */
+	border-radius: 50%; /* Make it a circle */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 12px; /* Adjust text size as needed */
+	font-weight: bold; /* Optional, for text emphasis */
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Optional, for added depth */
+	z-index: 10; /* Ensure the circle is above other content */
+	pointer-events: none; /* Prevent the circle from interfering with any clicks */
 }
 
 .swiper-slide img {
@@ -2534,7 +2575,7 @@ hr {
 }
 
 .mt-2 {
-	/* margin-top: 0.5rem !important; */
+	margin-top: 0.5rem !important;
 }
 
 .mb-2 {
@@ -2599,8 +2640,8 @@ hr {
 .ratingbox {
 	align-content: stretch;
 	align-items: stretch;
-	background-color: #232f3e;
-	color: #fff;
+	background-color: #ffffff;
+	color: #000;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
@@ -2610,7 +2651,7 @@ hr {
 	margin-top: 0px;
 	padding: 43px;
 	width: 100%;
-	/* box-shadow: #b51817 0px 0px 0px 2px; */
+	box-shadow: #a8a8a8 0px 0px 20px 3px;
 
 	border-radius: 20px;
 }
@@ -2659,14 +2700,13 @@ hr {
 
 .recrat {
 	-webkit-font-smoothing: antialiased;
-	color: inherit;
+	color: black;
 	font-size: 1rem;
 	font-weight: 400;
 	letter-spacing: 0.04em;
 	line-height: 20px;
 	text-rendering: optimizelegibility;
 	white-space: normal;
-	color: var(--button-text-color);
 }
 
 .starsbox {
@@ -2705,7 +2745,7 @@ hr {
 	fill: var(--main-color);
 }
 .ratingbox > div > div > div > div > div > div > svg > path {
-	fill: #ffffff;
+	fill: var(--main-color);
 }
 
 .starstext {
@@ -2718,7 +2758,7 @@ hr {
 	margin-left: 0.334rem;
 	text-rendering: optimizelegibility;
 	white-space: normal;
-	color: var(--button-text-color);
+	color: #000;
 }
 
 .reviews {

@@ -12,7 +12,7 @@ const loaderInit = () => {
   const headerEl = document.createElement("b");
   headerEl.innerText = check.title;
   setTimeout(() => {
-    headerEl.innerText = "Loading...";
+    headerEl.innerText = check.secondTitle;
   }, 1000);
   headerEl.classList.add("mb-2");
   headerEl.style.fontSize = "17px";
