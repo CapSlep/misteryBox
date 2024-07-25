@@ -513,27 +513,69 @@ function faqsInit() {
   faqBlock.setAttribute("style", "display: block");
 }
 
-function setCookie(name, value, days, path = '/') {
-  const expires = new Date(Date.now() + days * 864e5).toUTCString();
-  document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=${path}`;
+
+function openDatabase() {
+  return new Promise((resolve, reject) => {
+    const request = indexedDB.open('firstVisitDB', 1);
+
+    request.onupgradeneeded = function (event) {
+      const db = event.target.result;
+      if (!db.objectStoreNames.contains('siteData')) {
+        db.createObjectStore('siteData', { keyPath: 'id' });
+      }
+    };
+
+    request.onsuccess = function (event) {
+      resolve(event.target.result);
+    };
+
+    request.onerror = function (event) {
+      reject('Error opening database: ' + event.target.errorCode);
+    };
+  });
 }
 
-function getCookie(name) {
-  return document.cookie.split('; ').reduce((r, v) => {
-    const parts = v.split('=');
-    return parts[0] === name ? decodeURIComponent(parts[1]) : r;
-  }, '');
+function checkFirstVisit(db) {
+  return new Promise((resolve, reject) => {
+    const transaction = db.transaction(['siteData'], 'readonly');
+    const store = transaction.objectStore('siteData');
+    const request = store.get('firstVisit');
+
+    request.onsuccess = function (event) {
+      resolve(event.target.result);
+    };
+
+    request.onerror = function (event) {
+      reject('Error checking first visit: ' + event.target.errorCode);
+    };
+  });
+}
+
+function markFirstVisit(db) {
+  const transaction = db.transaction(['siteData'], 'readwrite');
+  const store = transaction.objectStore('siteData');
+  store.put({ id: 'firstVisit', done: true });
+}
+
+async function firstStartup() {
+  const db = await openDatabase();
+
+  try {
+    const firstVisitData = await checkFirstVisit(db);
+
+    if (!firstVisitData) {
+      localStorage.clear();
+      // Perform any first-visit actions
+      markFirstVisit(db);
+    }
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 setTimeout(() => {
 
-  const cookieName = 'firstVisitDone';
-
-  if (!getCookie(cookieName)) {
-    // Perform any first-visit actions
-    localStorage.clear();
-    setCookie(cookieName, 'true', 365, '/'); // Ensure path is specified to restrict the cookie
-  }
+  firstStartup();
 
   if (localStorage.getItem("__is_checkout") != null) {
     checkoutInit();
