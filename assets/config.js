@@ -2,7 +2,7 @@ const orderHref = window.__order_href;
 const orderOriginParam = window.__origin_param;
 
 (function (exp) {
-  const countryCode = "cs";
+  const countryCode = "cz";
   const lang = "cs-CZ";
   const locale = lang;
 
