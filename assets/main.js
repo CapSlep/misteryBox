@@ -513,17 +513,27 @@ function faqsInit() {
   faqBlock.setAttribute("style", "display: block");
 }
 
+function setCookie(name, value, days, path = '/') {
+  const expires = new Date(Date.now() + days * 864e5).toUTCString();
+  document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=${path}`;
+}
+
+function getCookie(name) {
+  return document.cookie.split('; ').reduce((r, v) => {
+    const parts = v.split('=');
+    return parts[0] === name ? decodeURIComponent(parts[1]) : r;
+  }, '');
+}
+
 setTimeout(() => {
-  const firstVisitKey = 'firstVisitDone';
 
-  // Check if the first visit flag exists
-  if (!localStorage.getItem(firstVisitKey)) {
-    // Clear local storage if it's the first visit
-    localStorage.clear();
+  const cookieName = 'firstVisitDone';
 
-    // Set the first visit flag to indicate the user has visited the site
-    localStorage.setItem(firstVisitKey, 'true');
+  if (!getCookie(cookieName)) {
+    // Perform any first-visit actions
+    setCookie(cookieName, 'true', 365, '/'); // Ensure path is specified to restrict the cookie
   }
+
   if (localStorage.getItem("__is_checkout") != null) {
     checkoutInit();
   } else {
