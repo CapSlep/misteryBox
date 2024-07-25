@@ -458,7 +458,7 @@ const mainInit = () => {
   const mainProductText = document.querySelector("#mainProductText");
 
   mainProductHeader.innerText = mainProduct.header;
-  mainProductName.innerText = mainProduct.name;
+  mainProductName.innerHTML = mainProduct.name;
   // mainProductOldPrice.innerText = mainProduct.oldPrice;
   // mainProductNewPrice.innerText = mainProduct.newPrice;
   mainProductText.innerHTML = mainProduct.text;
