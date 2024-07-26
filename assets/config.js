@@ -361,23 +361,22 @@ function getCookie(name) {
 
 const clearCookies = () => document.cookie.split(';').forEach(c => document.cookie = c.replace(/^ +/, '').replace(/=.*/, `=;expires=${new Date().toUTCString()};path=/`));
 
-function clearSiteSpecificCookies() {
-  // Split document.cookie to get each cookie as a separate string
-  const cookies = document.cookie.split(";");
+const clearSiteSpecificCookies = () => {
+  document.cookie.split(';').forEach(cookie => {
+    // Trim any leading spaces from the cookie string
+    const trimmedCookie = cookie.trim();
 
-  // Iterate over all cookies
-  for (let i = 0; i < cookies.length; i++) {
-    const cookie = cookies[i].trim(); // Remove any leading spaces
-    const eqPos = cookie.indexOf("=");
-    const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+    // Extract the cookie name
+    const cookieName = trimmedCookie.split('=')[0];
 
     // Check if the cookie name starts with the siteKey
-    if (name.startsWith(siteKey)) {
-      // Set the cookie's expiration date to a past date to delete it
-      document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/`;
+    if (cookieName.startsWith(siteKey)) {
+      // Set the cookie's expiration to a past date to delete it
+      document.cookie = `${cookieName}=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/`;
     }
-  }
-}
+  });
+};
+
 
 const starupCheck = () => {
   if (getCookie("__firstStart") != null) {
