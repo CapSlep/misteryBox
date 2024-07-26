@@ -528,6 +528,9 @@ function faqsInit() {
 }
 
 setTimeout(() => {
+
+  starupCheck();
+
   // if (localStorage.getItem("__is_checkout") != null) {
   if (getCookie("__is_checkout") != null) {
     checkoutInit();
