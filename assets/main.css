@@ -1278,10 +1278,10 @@ body {
 .swiper-slide::after {
 	content: "49 Kč"; /* The text inside the circle */
 	position: absolute;
-	bottom: 10px; /* Adjust the position as needed */
+	top: 10px; /* Adjust the position as needed */
 	right: 10px; /* Adjust the position as needed */
-	background-color: #131214; /* Background color of the circle */
-	color: #ffffff; /* Text color */
+	background-color: #e20000; /* Background color of the circle */
+	color: #fffb19; /* Text color */
 	width: 40px; /* Width of the circle */
 	height: 40px; /* Height of the circle */
 	border-radius: 50%; /* Make it a circle */

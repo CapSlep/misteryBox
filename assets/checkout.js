@@ -2,7 +2,8 @@ const { countryCode, cart } = window.__config;
 const cfg = window.__config;
 
 const checkoutInit = () => {
-  localStorage.setItem("__is_checkout", "true");
+  setCookie("__is_checkout", "true");
+  // localStorage.setItem("__is_checkout", "true");
   var input = document.querySelector("#phoneField");
 
 
