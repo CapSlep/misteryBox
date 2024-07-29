@@ -39,6 +39,9 @@ const modalWin = () => {
     setTimeout(() => {
       checkoutInit();
       openCheckout();
+
+      ratingInit();
+      reviewsInit();
       disableLoader();
     }, 2680);
   };
@@ -139,7 +142,7 @@ const fadeIn = (el, display) => {
 const game = () => {
   window.screen.width;
   let countAttempt = 2;
-  let counterBoxes = 9;
+  let counterBoxes = 6;
   let countClick = null;
   const boxesWrapper = document.createElement("div");
   boxesWrapper.classList.add("boxes");

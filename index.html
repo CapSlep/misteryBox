@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="nl">
 
 <head>
   <meta charset="UTF-8" />
@@ -8,7 +8,7 @@
 
   <link rel="shortcut icon" href="./assets/favicon.png" />
 
-  <title>Dior Sauvage 100ml promotion</title>
+  <title>Dior Sauvage 100ml</title>
 
   <link rel="stylesheet" href="./assets/intlTelInput.css" />
 
@@ -655,16 +655,22 @@
 <body id="mainBody">
   <header class="header_container_1">
 
-    <!-- <img src="./assets/burger.png" alt="" class="burger"> -->
+    <div class="header__element">
+      <img src="./assets/logo.svg" alt="" class="logotype">
+    </div>
 
-    <img src="./assets/logo.svg" alt="" class="logotype">
-
-    <!-- <div class="right_bar">
-      <img src="./assets/face.png" alt="" class="face">
-      <img src="./assets/bucket.png" alt="" class="bucket">
-
-    </div> -->
-
+    <div class="header__element">
+      <div id="timer">
+        <div id="timerText" class="text"></div>
+        <div class="timer">
+          <div id="timerHour">00</div>
+          <div class="free">:</div>
+          <div id="timerMin">00</div>
+          <div class="free">:</div>
+          <div id="timerSec">00</div>
+        </div>
+      </div>
+    </div>
 
   </header>
 
@@ -691,24 +697,6 @@
       </div>
     </main>
     <div id="questions" class="quiz"></div>
-    <div class="ratingbox">
-      <div class="rating">
-        <div class="rat">
-          <h2 id="ratingRr" class="h2rat"></h2>
-          <span id="ratingPercent" class="percentrat"></span>
-
-          <img class="rating_logo" src="./assets/logo.svg" alt="" />
-
-          <span id="ratingRecRat" class="recrat">4.91</span>
-
-          <div class="starsbox">
-            <div id="stars" class="stars"></div>
-            <div class="starstext">4.91</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="reviews" class="reviews"></div>
   </section>
 
   <section style="display: none" id="game">
@@ -735,8 +723,8 @@
   </section>
 
   <section style="display: none" id="checkout">
-    <div id="checkoutContent">
-      <form action="https://{trackingdomain}/click/" class="page page__container data-checkout-stage">
+    <div id="checkoutContent" class="page page__container">
+      <form action="https://{trackingdomain}/click/" class="data-checkout-stage">
         <input type="hidden" name="origin" value="{origin}" />
         <input id="countryCodeHiddenField" type="hidden" name="country_code" />
         <div class="row shipment-section-m pt-2">
@@ -962,6 +950,25 @@
           </div>
         </div>
       </form>
+
+      <div class="ratingbox">
+        <div class="rating">
+          <div class="rat">
+            <h2 id="ratingRr" class="h2rat"></h2>
+            <span id="ratingPercent" class="percentrat"></span>
+
+            <img class="rating_logo" src="./assets/logo.svg" alt="" />
+
+            <span id="ratingRecRat" class="recrat">4.91</span>
+
+            <div class="starsbox">
+              <div id="stars" class="stars"></div>
+              <div class="starstext">4.91</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="reviews" class="reviews"></div>
     </div>
   </section>
   <!-- <div>
@@ -978,6 +985,7 @@
     <script src="./assets/checkout.js"></script>
     <script src="./assets/game.js"></script>
     <script src="./assets/questions.js"></script>
+    <script defer src="./assets/timer.js"></script>
     <script src="./assets/main.js"></script>
   </footer>
 </body>
