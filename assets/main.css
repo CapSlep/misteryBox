@@ -1177,8 +1177,8 @@ body {
 .hero__gallery {
 	display: -ms-grid;
 	display: grid;
-	-ms-grid-columns: 1fr 1fr;
-	grid-template-columns: 1fr 1fr;
+	-ms-grid-columns: 1fr;
+	grid-template-columns: 1fr;
 	-ms-grid-rows: 1fr 1fr;
 	grid-template-rows: 1fr auto;
 	gap: 1.25rem;
@@ -1190,7 +1190,7 @@ body {
 }
 
 .hero__gallery-item::after {
-	content: "£1.95"; /* The text inside the circle */
+	content: "1,95 €"; /* The text inside the circle */
 	position: absolute;
 	top: 10px; /* Adjust the position as needed */
 	right: 10px; /* Adjust the position as needed */
@@ -1277,7 +1277,7 @@ body {
 }
 
 .swiper-slide::after {
-	content: "£1.95"; /* The text inside the circle */
+	content: "1,95 €"; /* The text inside the circle */
 	position: absolute;
 	top: 10px; /* Adjust the position as needed */
 	right: 10px; /* Adjust the position as needed */
@@ -3704,7 +3704,7 @@ video {
 	margin: 0 auto;
 }
 .logotype {
-	height: 125px;
+	height: 50px;
 	margin: 10px 0;
 }
 .burger {
