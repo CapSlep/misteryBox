@@ -3,11 +3,13 @@ const formatNumber = (num) => {
 };
 
 const lsResolveTimer = (seconds) => {
-  const lsTimer = localStorage.getItem("ls_timer");
+  // const lsTimer = localStorage.getItem("ls_timer");
+  const lsTimer = getCookie("ls_timer");
   const timer = lsTimer != null ? parseInt(lsTimer) : ((new Date().getTime() / 1000) + seconds);
 
   if (lsTimer == null) {
-    localStorage.setItem("ls_timer", timer);
+    // localStorage.setItem("ls_timer", timer);
+    setCookie("ls_timer", timer);
   }
 
   return timer;
@@ -32,7 +34,8 @@ const initObjs = () => {
 
   if (timerSeconds < 0) {
     timer = ((new Date().getTime() / 1000) + initSeconds);
-    localStorage.setItem("ls_timer", timer);
+    // localStorage.setItem("ls_timer", timer);
+    setCookie("ls_timer", timer);
 
     timerSeconds = timer - nowTimestamp;
   }

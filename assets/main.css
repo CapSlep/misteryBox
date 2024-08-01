@@ -234,6 +234,7 @@ body.lock {
 	height: 100%;
 	max-width: rem(820);
 	margin-right: rem(75);
+	overflow: hidden;
 }
 
 .slider__top {
@@ -1176,8 +1177,8 @@ body {
 .hero__gallery {
 	display: -ms-grid;
 	display: grid;
-	-ms-grid-columns: 1fr;
-	grid-template-columns: 1fr;
+	-ms-grid-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	-ms-grid-rows: 1fr 1fr;
 	grid-template-rows: 1fr auto;
 	gap: 1.25rem;
@@ -1189,7 +1190,7 @@ body {
 }
 
 .hero__gallery-item::after {
-	content: "1,95 €"; /* The text inside the circle */
+	content: "2,00 €"; /* The text inside the circle */
 	position: absolute;
 	top: 10px; /* Adjust the position as needed */
 	right: 10px; /* Adjust the position as needed */
@@ -1276,7 +1277,7 @@ body {
 }
 
 .swiper-slide::after {
-	content: "1,95 €"; /* The text inside the circle */
+	content: "2,00 €"; /* The text inside the circle */
 	position: absolute;
 	top: 10px; /* Adjust the position as needed */
 	right: 10px; /* Adjust the position as needed */
@@ -1417,6 +1418,9 @@ body {
 	display: -ms-flexbox;
 	display: flex;
 	margin-right: 0.75rem;
+}
+.rating_logo {
+	max-width: 300px;
 }
 
 .comments__rating-wrapper {
@@ -2360,6 +2364,7 @@ body {
 
 	.slider__top .swiper-slide {
 		padding: 0;
+		/* max-width: 280px; */
 	}
 
 	.header__container {
@@ -2372,7 +2377,7 @@ body {
 	}
 
 	.slider {
-		max-width: 20.625rem;
+		max-width: 15.625rem;
 	}
 
 	.slider__top .swiper-slide {
@@ -3699,7 +3704,7 @@ video {
 	margin: 0 auto;
 }
 .logotype {
-	height: 50px;
+	height: 125px;
 	margin: 10px 0;
 }
 .burger {
@@ -3757,6 +3762,7 @@ video {
 	color: #ef151e;
 	font-weight: 600;
 	font-size: 1rem;
+	text-align: center;
 }
 
 #timer > .timer {
