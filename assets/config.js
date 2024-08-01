@@ -1,6 +1,6 @@
 const orderHref = window.__order_href;
 const orderOriginParam = window.__origin_param;
-const siteKey = "sauvage-br";
+const siteKey = "sauvage-be-9-99";
 
 (function (exp) {
   const countryCode = "be";
@@ -21,20 +21,20 @@ const siteKey = "sauvage-br";
     newPrice: "",
     selectText: "",
     timer: "Er is niet veel tijd, haast u om uw bestelling te plaatsen!",
-    text: "Dior verkoopt zijn nieuwste Sauvage parfums voor slechts <b>2€</b> na het stopzetten van de activiteiten in Oost-Europa. Dankzij de nieuwe campagnestrategie kan iedereen in <b>België</b> vandaag een van de <b>1000</b> parfums bemachtigen🎁.",
+    text: "Dior verkoopt zijn nieuwste Sauvage parfums voor slechts <b>9.99 €</b> na het stopzetten van de activiteiten in Oost-Europa. Dankzij de nieuwe campagnestrategie kan iedereen in <b>België</b> vandaag een van de <b>1000</b> parfums bemachtigen🎁.",
   };
 
   const notifications = [
     {
       user: "Bea V***",
       location: "Brussel, België",
-      action: "Heeft net Dior Sauvage 100ml gekocht voor 2,00 €!",
+      action: "Heeft net Dior Sauvage 100ml gekocht voor 9.99 €!",
       timeago: "15 seconden geleden",
     },
     {
       user: "Tessa B***",
       location: "Antwerpen, België",
-      action: "Heeft net Dior Sauvage 100ml gekocht voor 2,00 €!",
+      action: "Heeft net Dior Sauvage 100ml gekocht voor 9.99 €!",
       timeago: "25 seconden geleden",
     },
   ];
@@ -241,11 +241,11 @@ const siteKey = "sauvage-br";
     main: {
       title: "Bestellingsoverzicht",
       oldPrice: "",
-      newPrice: "2,00 €",
+      newPrice: "9.99 €",
       size: "Maat",
       subTotal: {
         title: "Bestellingswaarde",
-        amount: "2,00 €",
+        amount: "9.99 €",
       },
       delivery: {
         title: "Bezorging",
@@ -253,7 +253,7 @@ const siteKey = "sauvage-br";
       },
       total: {
         title: "Totaal",
-        amount: "2,00 €",
+        amount: "9.99 €",
       },
       checkoutButton: "Betaal uw bestelling",
     },
