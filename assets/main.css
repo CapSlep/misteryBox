@@ -1190,7 +1190,7 @@ body {
 }
 
 .hero__gallery-item::after {
-	content: "1,95 €"; /* The text inside the circle */
+	content: "2 €"; /* The text inside the circle */
 	position: absolute;
 	top: 10px; /* Adjust the position as needed */
 	right: 10px; /* Adjust the position as needed */
@@ -1277,7 +1277,7 @@ body {
 }
 
 .swiper-slide::after {
-	content: "1,95 €"; /* The text inside the circle */
+	content: "2 €"; /* The text inside the circle */
 	position: absolute;
 	top: 10px; /* Adjust the position as needed */
 	right: 10px; /* Adjust the position as needed */
