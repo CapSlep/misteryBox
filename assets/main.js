@@ -531,14 +531,15 @@ setTimeout(() => {
 
 
   // if (localStorage.getItem("__is_checkout") != null) {
-  if (getCookie("__is_checkout") != null) {
+  // if (getCookie("__is_checkout") != null) {
+  if (false) {
     checkoutInit();
     openCheckout();
-    ratingInit();
-    reviewsInit();
   } else {
     openMain();
     mainInit();
+    ratingInit();
+    reviewsInit();
   }
   disableLoader();
 }, 2680);

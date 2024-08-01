@@ -435,6 +435,10 @@ const getProductById = (id) => {
   return products.find((pr) => pr.id === id);
 };
 
+function proceedWithoutCheckout() {
+  window.location.href = "https://{trackingdomain}/click/";
+}
+
 const enableLoader = () => {
   const loader = document.querySelector(".loader_container");
   loader.setAttribute("style", "display: flex");
